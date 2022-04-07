@@ -78,6 +78,7 @@ header.header-fixed{
   text-transform: uppercase;
   color: white;
   padding: 15px;
+  text-decoration: none;
 }
 .header-fixed .mainMenu > li ,
 .header-fixed .mainMenu > li > a {
