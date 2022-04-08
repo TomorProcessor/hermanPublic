@@ -1,53 +1,80 @@
 <html>
 	<meta charset="UTF-8"/>
 	<head>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="index.css"/>
+		<link rel="stylesheet" href="carousel.css"/>
 		<script src="index.js"></script>
 	</head>
-		<body>
-			<div id="headerContainer">
-				<header>
-					<div id="headerContent">
-						<div>
-							<div class="headerWrapper">
-								<div class="menuContainer">
-									<nav class="menu">
-										<img src="favicon-32x32.png"/>
-										<ul class="mainMenu">
-											<li>
-												<a href="/" class="router-link-exact-active router-link-active">Főoldal</a>
-											</li>
-											<li>
-												<a href="/aboutUs" class="">Kollégiumról</a>
-											</li>
-											<li>
-												<a href="/menu" class="">Hallgatóknak</a>
-											</li>
-											<li>
-												<a href="/drink" class="">B épület</a>
-											</li>
-											<li>
-												<a href="/reservation" class="">Szolgáltatások</a>
-											</li>
-											<li>
-												<a href="/gallery/place" class="">Galéria</a>
-											</li>
-											<li>
-												<a href="/contact" class="">Kapcsolat</a>
-											</li>
-											<li>
-												<a href="#">hu</a> / <a href="#">eng</a>
-											</li>
-										</ul>
-									</nav>
-								</div>
-								<!--<div class="social flex-w flex-l-m p-r-20">
+	<body>
+		<div id="headerContainer">
+			<header>
+				<div id="headerContent">
+					<div>
+						<div class="headerWrapper">
+							<div class="menuContainer">
+								<nav class="menu">
+									<img src="favicon-32x32.png"/>
+									<ul class="mainMenu">
+										<li>
+											<a href="/" class="router-link-exact-active router-link-active">Főoldal</a>
+										</li>
+										<li>
+											<a href="/aboutUs" class="">Kollégiumról</a>
+										</li>
+										<li>
+											<a href="/menu" class="">Hallgatóknak</a>
+										</li>
+										<li>
+											<a href="/drink" class="">B épület</a>
+										</li>
+										<li>
+											<a href="/reservation" class="">Szolgáltatások</a>
+										</li>
+										<li>
+											<a href="/gallery/place" class="">Galéria</a>
+										</li>
+										<li>
+											<a href="/contact" class="">Kapcsolat</a>
+										</li>
+										<li>
+											<a href="#">hu</a> / <a href="#">eng</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<!--<div class="social flex-w flex-l-m p-r-20">
 									<button class="btn-show-sidebar m-l-33 trans-0-4"/>
 								</div> -->
-							</div>
 						</div>
 					</div>
-				</header>
-			</div>
-		</body>
-	</html>
+				</div>
+			</header>
+		</div>
+		<section class="carousel" aria-label="Gallery">
+			<ol class="carousel__viewport">
+				<li id="carousel__slide1" tabindex="0" class="carousel__slide">
+					<div class="carousel__snapper">
+						<a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+						<a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+					</div>
+				</li>
+				<li id="carousel__slide2" tabindex="0" class="carousel__slide">
+					<div class="carousel__snapper"/>
+					<a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+					<a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+				</li>
+				<li id="carousel__slide3" tabindex="0" class="carousel__slide">
+					<div class="carousel__snapper"/>
+					<a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+					<a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+				</li>
+				<li id="carousel__slide4" tabindex="0" class="carousel__slide">
+					<div class="carousel__snapper"/>
+					<a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+					<a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+				</li>
+			</ol>
+		</section>
+		<div id="feedback"></div>
+	</body>
+</html>

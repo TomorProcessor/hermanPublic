@@ -1,3 +1,4 @@
+let carousel;
 window.onload = () => {
   let parent = document.getElementById('headerContainer');
   let header = document.getElementById('headerContent');
@@ -9,4 +10,10 @@ window.onload = () => {
 		  header.parentElement.classList.remove('header-fixed');
 	  }
   });
+  carousel = document.getElementsByClassName('carousel')[0];
+  carousel.style.height = window.innerHeight;
+}
+
+window.onResize = () => {
+	carousel.style.height = window.innerHeight;
 }
