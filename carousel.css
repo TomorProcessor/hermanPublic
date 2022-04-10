@@ -107,6 +107,8 @@ ol, li {
 
 /*.carousel__slide:before {*/
 .slideContent {
+	font-family: Pizzaolla;
+	font-weight: bold;
 	position: absolute;
     top: 50%;
     color: blue;
