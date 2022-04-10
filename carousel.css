@@ -110,7 +110,7 @@ ol, li {
 	position: absolute;
     top: 50%;
     color: blue;
-    font-size: 2em;
+    font-size: 4em;
     text-align: center;
     width: 100%;
 }
@@ -178,24 +178,23 @@ ol, li {
 .carousel__prev,
 .carousel__next {
   position: absolute;
-  top: 0;
-  margin-top: 37.5%;
+  top: 50%;
   width: 4rem;
   height: 4rem;
-  transform: translateY(-50%);
   border-radius: 50%;
   font-size: 0;
   outline: 0;
 }
 
+/*
 .carousel::before,
 .carousel__prev {
   left: -1rem;
-}
+}*/
 
 .carousel::after,
 .carousel__next {
-  right: -1rem;
+  right: 0rem;
 }
 
 .carousel::before,
