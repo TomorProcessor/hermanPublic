@@ -11,13 +11,21 @@ window.onload = () => {
   setCarouselHeight();
   
   carouselAnimIntervalId = window.setInterval(animateCarousel, animTime);
-  const nextButtons = document.getElementsByClassName('carousel__next');
-  
-  
+  addBtnEventListener(document.getElementsByClassName('carousel__next'));
+  addBtnEventListener(document.getElementsByClassName('carousel__prev'));
 }
 
 window.onResize = () => {
 	carousel.style.height = window.innerHeight;
+}
+
+function addBtnEventListener(buttons) {
+	for (let i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', (e) => {
+			actSlide = parseInt(e.target.href.split(slideIdPrefix)[1]);
+			pauseAndRestartCarouselAnim();
+		});
+	};
 }
 
 function setCarouselHeight() {
