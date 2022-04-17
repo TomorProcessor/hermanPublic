@@ -13,10 +13,19 @@ window.onload = () => {
   carouselAnimIntervalId = window.setInterval(animateCarousel, animTime);
   addBtnEventListener(document.getElementsByClassName('carousel__next'));
   addBtnEventListener(document.getElementsByClassName('carousel__prev'));
+  addFeedbackClickListener(document.getElementsByClassName('feedbackContentHolder'));
 }
 
 window.onResize = () => {
 	carousel.style.height = window.innerHeight;
+}
+
+function addFeedbackClickListener(feedbacks) {
+	for (let i = 0; i < feedbacks.length; i++) {
+		feedbacks[i].addEventListener('click', (e) => {
+			feedbackClickListener(e, feedbacks);
+		});
+	}
 }
 
 function addBtnEventListener(buttons) {
@@ -61,4 +70,14 @@ function pauseAndRestartCarouselAnim() {
 	carouselDelayStartTimerId = window.setTimeout(() => {
 		if (isNaN(carouselAnimIntervalId)) carouselAnimIntervalId = window.setInterval(animateCarousel, animTime);
 	}, animTime);
+}
+
+function feedbackClickListener(e, feedbacks) {
+	for (let i = 0; i < feedbacks.length; i++) {
+		if (feedbacks[i] == e.target) {
+			feedbacks[i].classList.remove('small');
+		} else {
+			feedbacks[i].classList.add('small');
+		}
+	}
 }
