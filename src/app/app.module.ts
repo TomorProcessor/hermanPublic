@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Route, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
-import { MainComponent } from './main/main.component';
 import { SharedModule } from './shared.module';
+import { MainComponent } from './main/main.component';
 import { AboutCollegeComponent } from './about-college/about-college.component';
 import { AboutBComponent } from './about-b/about-b.component';
 import { ForStudentsComponent } from './for-students/for-students.component';
 import { AboutServicesComponent } from './about-services/about-services.component';
 import { GaleryComponent } from './galery/galery.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -32,6 +36,10 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     SharedModule,
     NgbModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

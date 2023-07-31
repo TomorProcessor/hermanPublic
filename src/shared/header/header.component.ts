@@ -9,4 +9,10 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  isOpen = false;
+
+  toggleMenu(): void {
+    this.isOpen = !this.isOpen;
+  }
 }
