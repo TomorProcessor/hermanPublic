@@ -8,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  menuItems = [
+    { title: 'Főoldal', link: '/main' },
+    { title: 'Kollégiumról', link: '/about-college' },
+    { title: 'Hallgatóknak', link: '/for-students' },
+    { title: 'B épület', link: '/about-b' },
+    { title: 'Szolgáltatások', link: '/about-services' },
+    { title: 'Galéria', link: '/galery' },
+    { title: 'Kapcsolat', link: '/contact' },
+  ];
 
-  isOpen = false;
-
-  toggleMenu(): void {
-    this.isOpen = !this.isOpen;
+  onLoginClick() {
+    console.log('Bejelentkezés');
   }
+
+  onRegisterClick() {
+    console.log('Regisztráció');
+  }
+
+  ngOnInit() {}
 }

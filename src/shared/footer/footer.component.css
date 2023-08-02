@@ -1,0 +1,98 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, #015f91, #035734);
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  position: relative; /* A footer fix pozícióban lesz */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Teljes szélességű lesz */
+}
+
+.contact-position {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-column {
+  flex: 1; /* A sávok azonos méretre való állítása */
+  margin: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* A sáv elemeinek balra igazítása */
+  color: white;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-info .icon {
+  margin-right: 10px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.social-links .social-icon {
+  font-size: 18px;
+}
+
+.footer-text {
+  color: white;
+  text-align: center;
+}
+
+/* footer.component.css */
+/* ... */
+
+/* Új CSS szabályok a mobil nézethez */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px 0; /* Növeljük a padding-ot a mobil nézetben */
+  }
+
+  .contact-position {
+    flex-direction: column; /* A contact sávok oszlopokba rendeződnek mobil nézetben */
+  }
+
+  .contact-column {
+    margin: 10px 0; /* Csökkentsük a sávok közötti térközt mobil nézetben */
+  }
+
+  .social-links {
+    font-size: 24px; /* Csökkentsük az ikonok méretét mobil nézetben */
+  }
+
+  .footer-text {
+    font-size: 12px; /* Csökkentsük a szöveg méretét mobil nézetben */
+  }
+}

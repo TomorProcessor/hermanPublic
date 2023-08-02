@@ -1,30 +1,23 @@
 <mat-toolbar color="primary">
-  <div class="container">
-    <img
-      class="d-inline-block align-top"
-      src="assets/icon.png"
-      alt="Logo"
-      width="30"
-      height="30"
-    />
-    <button mat-icon-button (click)="toggleMenu()">
+  <img src="assets/icon.png" />
+  <!-- Mobil nézet: megjelenik egy menü ikon -->
+  <div class="menu-icon">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
+
+  <!-- Normál nézet: látható menüfülek -->
+  <div class="menu-items">
+    <a *ngFor="let item of menuItems" mat-button [routerLink]="item.link">{{
+      item.title
+    }}</a>
+  </div>
 </mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav #sidenav (click)="toggleMenu()" mode="over">
-    <mat-nav-list>
-      <a mat-list-item routerLink="/main">Főoldal</a>
-      <a mat-list-item routerLink="/about-college">Kollégiumról</a>
-      <a mat-list-item routerLink="/for-students">Hallgatóknak</a>
-      <a mat-list-item routerLink="/about-b">B épület</a>
-      <a mat-list-item routerLink="/about-services">Szolgáltatások</a>
-      <a mat-list-item routerLink="/galery">Galéria</a>
-      <a mat-list-item routerLink="/contact">Kapcsolat</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <!-- Your main content here -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+
+<!-- Menü tartalma -->
+<mat-menu #menu="matMenu">
+  <a *ngFor="let item of menuItems" mat-menu-item [routerLink]="item.link">{{
+    item.title
+  }}</a>
+</mat-menu>
