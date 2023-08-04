@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared.module';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
+  styleUrls: ['./main.component.css']
 })
-export class MainComponent {}
+export class MainComponent implements OnInit {
 
-@NgModule({
-  declarations: [MainComponent],
-  imports: [SharedModule],
-})
-export class MainModule {}
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

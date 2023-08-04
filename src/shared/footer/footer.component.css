@@ -15,38 +15,12 @@
   width: 100%; /* Teljes szélességű lesz */
 }
 
-.contact-position {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact-column {
-  flex: 1; /* A sávok azonos méretre való állítása */
-  margin: 20px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* A sáv elemeinek balra igazítása */
-  color: white;
-}
-
-.contact-info div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.contact-info .icon {
-  margin-right: 10px;
-}
-
 .social-links {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  margin-top: 20px;
   font-size: 30px;
 }
 
@@ -69,6 +43,7 @@
 .footer-text {
   color: white;
   text-align: center;
+  font-size: 10px;
 }
 
 /* footer.component.css */

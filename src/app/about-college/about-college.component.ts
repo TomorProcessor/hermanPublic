@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared.module';
 
 @Component({
   selector: 'app-about-college',
@@ -8,9 +6,3 @@ import { SharedModule } from 'src/app/shared.module';
   styleUrls: ['./about-college.component.css'],
 })
 export class AboutCollegeComponent {}
-
-@NgModule({
-  declarations: [AboutCollegeComponent],
-  imports: [SharedModule],
-})
-export class MainModule {}
