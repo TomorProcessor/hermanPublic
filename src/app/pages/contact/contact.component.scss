@@ -1,0 +1,20 @@
+.contact-info {
+  display: flex;
+  color: white;
+}
+
+.contact-info div {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-weight: lighter;
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
+
+.custom-box img {
+  width: 100px;
+  height: 100px;
+}
