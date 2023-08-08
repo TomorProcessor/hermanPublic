@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
     { title: 'Főoldal', link: '/main' },
     { title: 'Kollégiumról', link: '/about-college' },
     { title: 'Hallgatóknak', link: '/for-students' },
+    { title: 'A épület', link: '/about-a' },
     { title: 'B épület', link: '/about-b' },
     { title: 'Szolgáltatások', link: '/about-services' },
     { title: 'Kapcsolat', link: '/contact' },

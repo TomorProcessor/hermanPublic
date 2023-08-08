@@ -8,9 +8,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { SlideshowComponent } from 'src/shared/slideshow/slideshow.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from 'src/shared/footer/footer.component';
+import { HeaderComponent } from 'src/shared/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [SlideshowComponent],
+  declarations: [HeaderComponent, FooterComponent, SlideshowComponent],
   imports: [
     RouterModule,
     CommonModule,
@@ -20,6 +24,8 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
+    NgbModule,
+    NgbCarouselModule,
   ],
   exports: [
     SlideshowComponent,
@@ -29,6 +35,8 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
+    FooterComponent,
+    HeaderComponent,
   ],
 })
 export class SharedModule {}

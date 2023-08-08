@@ -1,3 +1,7 @@
-<p>
-  slideshow works!
-</p>
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide *ngFor="let imageUrl of images">
+    <div class="picsum-img-wrapper">
+      <img [src]="imageUrl" />
+    </div>
+  </ng-template>
+</ngb-carousel>
