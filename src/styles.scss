@@ -72,12 +72,14 @@ h1 {
 .textbox {
   /*background-color: rgba(0, 0, 0, 0.17);*/
   padding: 10px;
-  background: rgba(155, 155, 155, 0.17);
-  box-shadow: 0 8px 32px 0 rgba(37, 39, 67, 0.37);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  margin-top: 5%;
+  background: rgba(74, 74, 74, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 50;
 }
 
 p {
@@ -85,11 +87,34 @@ p {
 }
 
 .custom-box {
-  background-color: rgba(0, 0, 0, 0.17);
-  padding: 20px;
-  margin-bottom: 20px;
+  background: rgba(74, 74, 74, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5%;
+  z-index: 50;
+  display: inline-block; /* Hozzáadva a blokkszintű elemek elrendezéséhez */
+  width: 100%; /* Fix szélesség */
+  height: 100%; /* Automatikus magasság a tartalomhoz igazítva */
+  box-sizing: border-box; /* A padding ne növelje a méretet */
+  margin: 5%;
 }
 
 h4 {
   font-weight: lighter;
+}
+
+a {
+  color: white;
+}
+
+.container {
+  margin-bottom: 2.5%;
+}
+
+h2 {
+  font-weight: lighter;
+  padding: 5%;
 }

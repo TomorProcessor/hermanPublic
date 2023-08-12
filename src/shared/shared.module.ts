@@ -12,6 +12,7 @@ import { FooterComponent } from 'src/shared/footer/footer.component';
 import { HeaderComponent } from 'src/shared/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SlideshowComponent],
@@ -26,6 +27,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MatMenuModule,
     NgbModule,
     NgbCarouselModule,
+    MatSlideToggleModule,
   ],
   exports: [
     SlideshowComponent,
@@ -37,6 +39,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MatMenuModule,
     FooterComponent,
     HeaderComponent,
+    MatSlideToggleModule,
   ],
 })
 export class SharedModule {}

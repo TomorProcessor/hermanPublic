@@ -25,7 +25,7 @@
     </p>
   </div>
 </div>
-<br />
+<app-slideshow></app-slideshow>
 
 <div class="container">
   <div class="row justify-content-center">
@@ -33,16 +33,23 @@
       <div class="custom-box d-flex flex-column align-items-center">
         <img src="assets/dummy.png" class="img-fluid" />
         <h4>Teszt Elek</h4>
-        <p>
-          "Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum."
+        <p class="align-self-start">
+          {{ showMoredummy ? textdummy : (textdummy | slice : 0 : 150) }}
+          <span *ngIf="!showMoredummy">...</span>
+          <a
+            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="javascript:;"
+            *ngIf="!showMoredummy"
+            (click)="onShowdummy()"
+            >Több</a
+          ><a
+            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="javascript:;"
+            *ngIf="showMoredummy"
+            (click)="onShowdummy()"
+          >
+            Kevesebb</a
+          >
         </p>
       </div>
     </div>
@@ -51,20 +58,23 @@
       <div class="custom-box d-flex flex-column align-items-center">
         <img src="assets/szakacs_reka.jpg" class="img-fluid" />
         <h4>Szakács Réka</h4>
-        <p>
-          "A kollégium fekvése közlekedési szempontból nagyon jó. 800m-es
-          körzetében két-három kisebb bolt is található, CBA, Coop és Spar. Az
-          ötös troli és kilencvenes busz által elérhető a Tesco, Aldi, Penny és
-          Lidl is. A 60Y és a 67Y-nal elérhető Szőregen a Szeged NOVA
-          Bevásárlóközpont, ahol Rossmann drogéria, Pepco és más üzletek
-          találhatóak. A Torontál tér tíz perc sétára van a kollégiummal szemben
-          lévő ligeten át, ahonnan bármelyik busszal el lehet jutni a Széchenyi
-          térre, és átszállni az 1-es és 2-es villamosra, amely az Aradi térre
-          visz, ahol a TTIK-s diákok óráinak zöme folyik. A 32-esnek két
-          megállója is van a kollégium mellett, amelynek a végállomása közel van
-          az Aradi térhez. Ez a járat megáll a Dugonics téren, ahonnan elérhető
-          a GTK mindkét épülete gyalog, és a 4-es villamosra átszállva Kecskés
-          irányába elérhető a Tanulmányi és Információs Központ."
+        <p class="align-self-start">
+          {{ showMoreszakacs ? textszakacs : (textszakacs | slice : 0 : 150) }}
+          <span *ngIf="!showMoreszakacs">...</span>
+          <a
+            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="javascript:;"
+            *ngIf="!showMoreszakacs"
+            (click)="onShowszakacs()"
+            >Több</a
+          ><a
+            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="javascript:;"
+            *ngIf="showMoreszakacs"
+            (click)="onShowszakacs()"
+          >
+            Kevesebb</a
+          >
         </p>
       </div>
     </div>
@@ -73,21 +83,26 @@
       <div class="custom-box d-flex flex-column align-items-center">
         <img src="assets/urban_janos.jpg" class="img-fluid" />
         <h4>Urbán János</h4>
-        <p>
-          "Pár éves kollégiumi lakhatásom során rájöttem néhány dologra a Herman
-          Ottó Kollégium kapcsán, amiért ajánlom: Elsőnek említeném, a közösségi
-          életet, melyben számos program segít a lakóknak, hogy megismerjék
-          egymást. Valamint szórakozzanak, és kicsit kikapcsoljanak az egyetemi
-          előadások után. Másodszor, a kollégium rendelkezik műfüves pályával,
-          amelyen rendszeresen meghirdetett sporteseményeken lehet részt venni.
-          A futás szerelmeseinek szerencséje van, a közelben lévő Erzsébet
-          ligetben külön pálya segíti az edzések lebonyolítását. Utolsó sorban
-          pedig az elhelyezkedését emelném ki, igaz nincs túl közel számos
-          egyetemi épülethez, de ettől függetlenül gyorsan meg lehet őket
-          közelíteni, mivel sok, gyakran közlekedő busz van a kollégium
-          közvetlen közelében."
+        <p class="align-self-start">
+          {{ showMoreurban ? texturban : (texturban | slice : 0 : 150) }}
+          <span *ngIf="!showMoreurban">...</span>
+          <a
+            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="javascript:;"
+            *ngIf="!showMoreurban"
+            (click)="onShowurban()"
+            >Több</a
+          ><a
+            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="javascript:;"
+            *ngIf="showMoreurban"
+            (click)="onShowurban()"
+          >
+            Kevesebb</a
+          >
         </p>
       </div>
     </div>
   </div>
 </div>
+<br />
