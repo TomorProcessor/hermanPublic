@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <img src="assets/icon.png" />
   <!-- Mobil nézet: megjelenik egy menü ikon -->
   <div class="menu-icon">
@@ -12,6 +12,24 @@
     <a *ngFor="let item of menuItems" mat-button [routerLink]="item.link">{{
       item.title
     }}</a>
+  </div>
+  <div class="ms-auto button-container">
+    <button
+      mat-raised-button
+      (click)="openLogin()"
+      color="accent"
+      class="custom-button"
+    >
+      Bejelentkezés <span class="material-icons login-button"> login </span>
+    </button>
+    <button
+      mat-raised-button
+      (click)="openRegist()"
+      color="primary"
+      class="custom-button"
+    >
+      Regisztráció <span class="material-icons"> person </span>
+    </button>
   </div>
 </mat-toolbar>
 

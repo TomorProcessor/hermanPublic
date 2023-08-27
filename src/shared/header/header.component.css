@@ -1,22 +1,21 @@
 .mat-toolbar {
-  background: rgba(74, 74, 74, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 16px;
-  position: fixed;
+  /* background-color: rgb(48, 164, 115);*/
+  background-color: #05152c;
+  color: white;
+  font-size: 18px;
   top: 0;
   z-index: 100;
+  margin-bottom: 2%;
 }
 
 .mat-toolbar a {
   text-decoration: none;
 }
-.custom-navbar-bg {
-  background-color: #50c878;
+.custom-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
 /* Mobil nézet: menü ikon */
 .menu-icon {
   display: none; /* Alapértelmezésben nem jelenik meg */
@@ -38,4 +37,10 @@
   .menu-items {
     display: none; /* Nem jelenik meg a menüfülek */
   }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Középre igazítás vízszintesen */
+  gap: 10px; /* Távolság a gombok között */
 }

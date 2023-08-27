@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./slideshow.component.css'],
 })
 export class SlideshowComponent {
-  images = ['assets/img1.jpg', 'assets/img2.jpg', 'assets/img3.jpg'];
+  images = [
+    'assets/szoba1.jpg',
+    'assets/szoba2.jpg',
+    'assets/szoba3.jpg',
+    'assets/szoba4.jpg',
+    'assets/szoba5.jpg',
+  ];
 }

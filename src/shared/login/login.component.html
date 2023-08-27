@@ -1,0 +1,43 @@
+<h2>Bejelentkezés</h2>
+<div class="login-container form">
+  <mat-form-field appearance="outline" class="form-full-width">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      placeholder="hermanotto@gmail.com"
+      [formControl]="email"
+      required
+    />
+    <mat-error *ngIf="email.invalid">{{ getErrorMessageEmail() }}</mat-error>
+  </mat-form-field>
+</div>
+
+<div class="login-container form">
+  <mat-form-field appearance="outline" class="form-full-width">
+    <mat-label>Jelszó</mat-label>
+    <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      [formControl]="password"
+      required
+    />
+    <mat-error *ngIf="password.invalid">{{
+      getErrorMessagePassword()
+    }}</mat-error>
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<div class="button-container">
+  <button mat-fab extended color="accent">Bejelentkezés</button>
+  <button mat-fab extended (click)="openRegist()" color="primary">
+    Regisztráció
+  </button>
+</div>

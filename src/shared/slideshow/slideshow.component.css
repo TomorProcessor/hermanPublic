@@ -1,15 +1,8 @@
 img {
-  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  min-width: 70%;
+  min-height: 70;
   border-radius: 10px;
-}
-.carousel-container {
-  width: 50%; /* Változtathatod a kívánt szélességre */
-  height: auto; /* Változtathatod a kívánt magasságra */
-  margin: 0 auto; /* Középre igazítás */
-  background: rgba(74, 74, 74, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 10px;
+  margin-top: 5%;
 }

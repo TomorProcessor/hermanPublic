@@ -3,12 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(74, 74, 74, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #333;
+  /*box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color: rgb(45, 55, 71, 0.7);*/
   position: relative; /* A footer fix pozícióban lesz */
   left: 0;
   bottom: 0;
@@ -31,7 +29,7 @@
   width: 30px;
   height: 30px;
   margin: 0 5px;
-  color: #fff;
+  color: white;
   border-radius: 50%;
   text-decoration: none;
 }

@@ -1,77 +1,50 @@
-<br />
 <div class="container textbox">
   <div class="d-flex flex-column">
     <h1 class="align-self">Névadónk</h1>
-    <img src="assets/herman_otto.jpg" class="herman_otto" />
     <p class="align-self-start">
-      {{ showMoreHerman ? textherman : (textherman | slice : 0 : 150) }}
-      <span *ngIf="!showMoreHerman">...</span>
+      <img
+        src="assets/herman_otto.jpg"
+        class="rounded float-start herman_otto"
+      />
+      {{ textherman | showMoreLess : showMoreHerman }}
       <a
-        class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+        class="link-underline-dark"
         href="javascript:;"
-        *ngIf="!showMoreHerman"
-        (click)="onShowHerman()"
-        >Több</a
-      ><a
-        class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-        href="javascript:;"
-        *ngIf="showMoreHerman"
-        (click)="onShowHerman()"
-      >
-        Kevesebb</a
+        (click)="showMoreHerman = !showMoreHerman"
+        >{{ !showMoreHerman ? "Több" : "Kevesebb" }}</a
       >
     </p>
   </div>
 </div>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-6 mb-4">
+    <div class="col-md-6 mb-9">
       <div class="custom-box d-flex flex-column align-items-center">
-        <img src="assets/megyeri_arpadne.jpg" class="img-fluid pictures" />
+        <img src="assets/megyeri_arpadne.jpg" class="img-fluid" />
         <h4>MEGYERI ÁRPÁDNÉ (1946-2006)</h4>
         <p class="align-self-start">
-          {{ showMoreMegyeri ? textmegyeri : (textmegyeri | slice : 0 : 150) }}
-          <span *ngIf="!showMoreMegyeri">...</span>
+          {{ textmegyeri | showMoreLess : showMoreMegyeri }}
           <a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            class="link-underline-dark"
             href="javascript:;"
-            *ngIf="!showMoreMegyeri"
-            (click)="onShowMegyeri()"
-            >Több</a
-          >
-          <a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            href="javascript:;"
-            *ngIf="showMoreMegyeri"
-            (click)="onShowMegyeri()"
-          >
-            Kevesebb</a
+            (click)="showMoreMegyeri = !showMoreMegyeri"
+            >{{ !showMoreMegyeri ? "Több" : "Kevesebb" }}</a
           >
         </p>
       </div>
     </div>
 
-    <div class="col-md-6 mb-4">
+    <div class="col-md-6 mb-9">
       <div class="custom-box d-flex flex-column align-items-center">
-        <img src="assets/kozma_laszlo_2011.jpg" class="img-fluid pictures" />
+        <img src="assets/kozma_laszlo_2011.jpg" class="img-fluid" />
         <h4>Dr. KOZMA LÁSZLÓ (1933-2013)</h4>
         <p class="align-self-start">
-          {{ showMoreKozma ? textkozma : (textkozma | slice : 0 : 150) }}
-          <span *ngIf="!showMoreKozma">...</span>
+          {{ textkozma | showMoreLess : showMoreKozma }}
           <a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            class="link-underline-dark"
             href="javascript:;"
-            *ngIf="!showMoreKozma"
-            (click)="onShowKozma()"
-            >Több</a
-          >
-          <a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            href="javascript:;"
-            *ngIf="showMoreKozma"
-            (click)="onShowKozma()"
-          >
-            Kevesebb</a
+            (click)="showMoreKozma = !showMoreKozma"
+            >{{ !showMoreKozma ? "Több" : "Kevesebb" }}</a
           >
         </p>
       </div>

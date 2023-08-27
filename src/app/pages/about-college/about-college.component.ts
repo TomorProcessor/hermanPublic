@@ -10,18 +10,6 @@ export class AboutCollegeComponent {
   showMoreMegyeri = false;
   showMoreKozma = false;
 
-  onShowHerman() {
-    this.showMoreHerman = !this.showMoreHerman;
-  }
-
-  onShowMegyeri() {
-    this.showMoreMegyeri = !this.showMoreMegyeri;
-  }
-
-  onShowKozma() {
-    this.showMoreKozma = !this.showMoreKozma;
-  }
-
   textherman = `  A kollégium névadója: Herman Ottó (1835-1914) Herman Ottó 1835. június
   28-án született a Zólyom megyei Breznóbányán (ma Szlovákia, Brezno). Ez a
   pontos adat, ugyanis több századeleji lexikon azt írja, hogy június 26-án,

@@ -32,12 +32,22 @@
                 "output": "/assets/webfonts/"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              {
+                "input": "src/materialstyle.scss"
+              },
+              "src/styles.scss"
+            ],
             "scripts": [
               {
                 "input": "node_modules/@popperjs/core/dist/esm/index.js",
                 "inject": true,
                 "bundleName": "popperjs"
+              },
+              {
+                "input": "node_modules/@agm/core/esm2015/lib/directives/map.js",
+                "inject": true,
+                "bundleName": "agm"
               }
             ]
           },

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
+import { RegistComponent } from '../regist/regist.component';
 
 @Component({
   selector: 'app-header',
@@ -6,16 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(public login: MatDialog) {}
+
+  tilte = 'login';
 
   menuItems = [
-    { title: 'Főoldal', link: '/main' },
-    { title: 'Kollégiumról', link: '/about-college' },
-    { title: 'Hallgatóknak', link: '/for-students' },
-    { title: 'A épület', link: '/about-a' },
-    { title: 'B épület', link: '/about-b' },
-    { title: 'Szolgáltatások', link: '/about-services' },
-    { title: 'Kapcsolat', link: '/contact' },
+    { title: 'Főoldal', link: '/fooldal' },
+    { title: 'Kollégiumról', link: '/kollegiumrol' },
+    { title: 'Hallgatóknak', link: '/hallgatoknak' },
+    { title: 'A épület', link: '/a-epulet' },
+    { title: 'B épület', link: '/b-epulet' },
+    { title: 'Szolgáltatások', link: '/szolgaltatasok' },
+    { title: 'Kapcsolat', link: '/kapcsolat' },
   ];
 
   onLoginClick() {
@@ -24,6 +29,22 @@ export class HeaderComponent implements OnInit {
 
   onRegisterClick() {
     console.log('Regisztráció');
+  }
+
+  openLogin() {
+    this.login.open(LoginComponent, {
+      width: '30%',
+      height: '50%',
+      data: 'right click',
+    });
+  }
+
+  openRegist() {
+    this.login.open(RegistComponent, {
+      width: '40%',
+      height: '90%',
+      data: 'right click',
+    });
   }
 
   ngOnInit() {}

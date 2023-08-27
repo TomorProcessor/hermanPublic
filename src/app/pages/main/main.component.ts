@@ -14,18 +14,6 @@ export class MainComponent implements OnInit {
   showMoreurban = false;
   showMoredummy = false;
 
-  onShowszakacs() {
-    this.showMoreszakacs = !this.showMoreszakacs;
-  }
-
-  onShowurban() {
-    this.showMoreurban = !this.showMoreurban;
-  }
-
-  onShowdummy() {
-    this.showMoredummy = !this.showMoredummy;
-  }
-
   textszakacs = `"A kollégium fekvése közlekedési szempontból nagyon jó. 800m-es
   körzetében két-három kisebb bolt is található, CBA, Coop és Spar. Az
   ötös troli és kilencvenes busz által elérhető a Tesco, Aldi, Penny és

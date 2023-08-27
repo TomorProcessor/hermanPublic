@@ -22,14 +22,14 @@ import { AboutAComponent } from './pages/about-a/about-a.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/app-root', pathMatch: 'full' },
-  { path: 'main', component: MainComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'about-b', component: AboutBComponent },
-  { path: 'about-a', component: AboutAComponent },
-  { path: 'about-college', component: AboutCollegeComponent },
-  { path: 'about-services', component: AboutServicesComponent },
-  { path: 'for-students', component: ForStudentsComponent },
+  { path: '', redirectTo: '/fooldal', pathMatch: 'full' },
+  { path: 'fooldal', component: MainComponent },
+  { path: 'kapcsolat', component: ContactComponent },
+  { path: 'b-epulet', component: AboutBComponent },
+  { path: 'a-epulet', component: AboutAComponent },
+  { path: 'kollegiumrol', component: AboutCollegeComponent },
+  { path: 'szolgaltatasok', component: AboutServicesComponent },
+  { path: 'hallgatoknak', component: ForStudentsComponent },
 ];
 
 @NgModule({

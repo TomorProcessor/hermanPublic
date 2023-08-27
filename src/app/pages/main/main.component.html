@@ -1,6 +1,5 @@
-<br />
-<div class="container textbox">
-  <div class="d-flex flex-column">
+<div class="d-flex flex-column">
+  <div class="container textbox text">
     <h1 class="align-self">Köszöntő</h1>
     <p class="align-self-start">
       Örömmel köszöntöm a Herman Ottó Kollégium virtuális lakójaként, és
@@ -21,34 +20,87 @@
       tevékenységüket. Nyáron szállodaként működünk, de helyet biztosítunk a
       terepgyakorlaton, vagy kutatásban résztvevő hallgatóknak is. A honlapunkon
       remélem minden információt megtalál, ha viszont kérdése, észrevétele
-      lenne, megteheti a vendégkönyvben.
+      lenne, megteheti email címen keresztül.
     </p>
-  </div>
-</div>
-<app-slideshow></app-slideshow>
 
-<div class="container">
+    <p class="welc">Buzás Szilárd kollégium igazgató</p>
+  </div>
+  <img src="assets/img4.jpg" class="pic align-self" />
+</div>
+
+<div class="d-flex">
+  <div class="container news">
+    <div class="col">
+      <div class="custom-box">
+        <h1>Hírek</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem
+          ante, mattis a mattis ut, malesuada non nulla. Sed varius vel risus et
+          tempor. Pellentesque feugiat aliquam metus, tincidunt facilisis justo
+          eleifend quis. Donec laoreet elit sit amet tortor sodales, at tempus
+          justo tristique. Vivamus ut tristique nibh. Aliquam aliquet enim
+          vehicula pretium laoreet. Nulla a ex et sapien tempus consequat nec
+          vel elit. Fusce id mi semper, pulvinar tortor et, molestie urna.
+          Mauris eros ligula, feugiat nec molestie sed, facilisis at dui. In sit
+          amet varius tellus, id ultricies lectus. Praesent venenatis ligula in
+          sapien maximus, at sodales ex consectetur. Vestibulum eu lectus sit
+          amet sem tristique sagittis. Fusce sed ex vulputate, feugiat ante
+          vitae, feugiat nisl. Etiam at velit efficitur, pharetra purus nec,
+          pharetra elit. In vestibulum dolor nec nunc imperdiet consectetur.
+          Mauris ullamcorper quam a molestie lobortis.
+        </p>
+      </div>
+    </div>
+  </div>
+  <img src="assets/img3.jpg" class="pic" />
+</div>
+
+<div class="container textbox">
+  <h1 class="align-self">Várólista</h1>
+  <p>
+    Kedves Hallgatók! Aki a rendes felvételi eljárásban nem nyert felvételt, de
+    mégis szeretne a 2020/2021-as tanév folyamán a kollégiumunkban lakni,
+    jelentkezhet VÁRÓLISTÁRA. Mindenképpen érdemes ezzel a lehetőséggel élni,
+    hiszen a kollégiumokban - már félévkezdettől – folyamatos a mozgás
+    (évhalasztások, külföldi ösztöndíjasok, kiköltözések, stb.) Várólistára
+    jelentkezni a következő módon lehet:
+  </p>
+  <ol>
+    <li>
+      A kollégiumunk honlapjáról letöltöd és kinyomtatod a kollégiumi adatlapot
+      és a nyilatkozatot.
+    </li>
+    <li>A nyomtatványokat hiánytalanul kitöltöd.</li>
+    <li>A szükséges igazolásokat csatolod.</li>
+    <li>
+      A SZTE Herman Ottó Kollégium Igazgatóságán leadod, vagy bescannelve
+      (fontos, hogy ne fénykép, hanem scannelt formátum legyen) elküldöd az
+      adminisztracio@ohsh.u-szeged.hu címre.
+    </li>
+    <li>Amikor felvételt nyertél, e-mailben és telefonon értesítünk.</li>
+  </ol>
+
+  <ul>
+    <li>Letölthető dokumentumok felsőbbéves hallgatóknak:</li>
+    <li>Letölthető dokumentumok elsőéves hallgatóknak:</li>
+  </ul>
+
+  <p class="welc">Adatlap Nyilatkozat Adminisztrációért felelős senior</p>
+</div>
+
+<div class="container opinions">
   <div class="row justify-content-center">
     <div class="col-md-4 mb-3">
       <div class="custom-box d-flex flex-column align-items-center">
         <img src="assets/dummy.png" class="img-fluid" />
         <h4>Teszt Elek</h4>
         <p class="align-self-start">
-          {{ showMoredummy ? textdummy : (textdummy | slice : 0 : 150) }}
-          <span *ngIf="!showMoredummy">...</span>
+          {{ textdummy | showMoreLess : showMoredummy }}
           <a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            class="link-underline-dark"
             href="javascript:;"
-            *ngIf="!showMoredummy"
-            (click)="onShowdummy()"
-            >Több</a
-          ><a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            href="javascript:;"
-            *ngIf="showMoredummy"
-            (click)="onShowdummy()"
-          >
-            Kevesebb</a
+            (click)="showMoredummy = !showMoredummy"
+            >{{ !showMoredummy ? "Több" : "Kevesebb" }}</a
           >
         </p>
       </div>
@@ -59,21 +111,12 @@
         <img src="assets/szakacs_reka.jpg" class="img-fluid" />
         <h4>Szakács Réka</h4>
         <p class="align-self-start">
-          {{ showMoreszakacs ? textszakacs : (textszakacs | slice : 0 : 150) }}
-          <span *ngIf="!showMoreszakacs">...</span>
+          {{ textszakacs | showMoreLess : showMoreszakacs }}
           <a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            class="link-underline-dark"
             href="javascript:;"
-            *ngIf="!showMoreszakacs"
-            (click)="onShowszakacs()"
-            >Több</a
-          ><a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            href="javascript:;"
-            *ngIf="showMoreszakacs"
-            (click)="onShowszakacs()"
-          >
-            Kevesebb</a
+            (click)="showMoreszakacs = !showMoreszakacs"
+            >{{ !showMoreszakacs ? "Több" : "Kevesebb" }}</a
           >
         </p>
       </div>
@@ -84,25 +127,15 @@
         <img src="assets/urban_janos.jpg" class="img-fluid" />
         <h4>Urbán János</h4>
         <p class="align-self-start">
-          {{ showMoreurban ? texturban : (texturban | slice : 0 : 150) }}
-          <span *ngIf="!showMoreurban">...</span>
+          {{ texturban | showMoreLess : showMoreurban }}
           <a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            class="link-underline-dark"
             href="javascript:;"
-            *ngIf="!showMoreurban"
-            (click)="onShowurban()"
-            >Több</a
-          ><a
-            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            href="javascript:;"
-            *ngIf="showMoreurban"
-            (click)="onShowurban()"
-          >
-            Kevesebb</a
+            (click)="showMoreurban = !showMoreurban"
+            >{{ !showMoreurban ? "Több" : "Kevesebb" }}</a
           >
         </p>
       </div>
     </div>
   </div>
 </div>
-<br />

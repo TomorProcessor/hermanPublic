@@ -1,0 +1,37 @@
+.form-full-width {
+  width: 50%;
+  padding-left: 2%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Középre igazítás vízszintesen */
+  gap: 10px; /* Távolság a gombok között */
+}
+
+h1 {
+  border: none;
+  padding: 5%;
+}
+
+.registration-form {
+  padding: 10%;
+
+  margin: 0;
+}
+
+h2 {
+  padding: 5%;
+  background-color: #2ca469;
+  font-weight: lighter;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-icon {
+  font-size: 100px;
+}
