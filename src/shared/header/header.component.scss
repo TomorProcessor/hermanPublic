@@ -1,0 +1,105 @@
+.mat-toolbar {
+  background-color: #05152cef;
+  color: white;
+  font-size: 18px;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 2%;
+  font-weight: lighter;
+  position: sticky;
+}
+
+.mat-toolbar a {
+  text-decoration: none;
+}
+.custom-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Középre igazítás vízszintesen */
+  gap: 10px; /* Távolság a gombok között */
+}
+
+/* Mobil nézet: menü ikon */
+.menu-icon {
+  display: none; /* Alapértelmezésben nem jelenik meg */
+}
+
+/* Normál nézet: menüfülek */
+.menu-items {
+  display: flex;
+  padding-left: 5%;
+  gap: 30px;
+}
+
+/* Mobil nézet: menüfülek */
+
+ul {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  margin: -10px;
+  padding: 0px;
+  margin-top: 5%;
+}
+
+.button-mobile {
+  border: none;
+}
+
+li {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  width: 35%;
+  margin-bottom: 10px;
+  margin-left: 33%;
+  justify-content: center;
+  border: solid 1px white;
+  border-radius: 40px;
+}
+
+.menu-items-mobile {
+  display: none;
+  align-content: center;
+  flex-direction: column; /* Menüfülek függőleges elrendezése */
+  top: 8%; /* A menü ikon alatt jelennek meg */
+  position: absolute;
+  background-color: #05152c;
+  z-index: 101; /* Alapértelmezésben nem jelenik meg */
+}
+
+/* Media query a mobil nézethez */
+@media (max-width: 600px) {
+  /* Mobil nézet: menü ikon */
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    padding-left: 80%;
+  }
+
+  /* Menüfülek a mobil nézethez */
+  .menu-items-mobile {
+    display: flex; /* Alapértelmezésben ne jelenjenek meg */
+  }
+
+  .menu-items {
+    display: none;
+    /* A normál nézetben jelenjenek meg a menüfülek */
+  }
+
+  .menu-icon.is-open .menu-items-mobile {
+    display: flex;
+  }
+
+  .menu-icon.is-open .menu-items {
+    display: none;
+  }
+
+  .buttons {
+    display: none;
+  }
+}

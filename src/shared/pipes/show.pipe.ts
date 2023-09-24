@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'showMoreLess',
 })
 export class ShowPipe implements PipeTransform {
-  maxLenght = 600;
+  maxLenght = 1000;
   showMore = false;
 
   transform(value: string, isShowMore: boolean): string {

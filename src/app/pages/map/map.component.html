@@ -1,5 +1,5 @@
 <div class="map-container" #mapContainer>
-  <div *ngIf="apiLoaded | async">
+  <div class="map-mobil" *ngIf="apiLoaded | async">
     <google-map [options]="options" [width]="1280">
       <map-marker
         *ngFor="let marker of markers"

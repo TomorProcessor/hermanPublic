@@ -6,12 +6,26 @@ import { RegistComponent } from '../regist/regist.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   constructor(public login: MatDialog) {}
+  isMenuOpen: boolean = false;
 
-  tilte = 'login';
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+
+    if (this.isMenuOpen) {
+      document.body.style.overflow = 'hidden'; // Görgetés letiltása
+    } else {
+      document.body.style.overflow = 'auto'; // Görgetés engedélyezése
+    }
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+    document.body.style.overflow = 'auto'; // Görgetés engedélyezése
+  }
 
   menuItems = [
     { title: 'Főoldal', link: '/fooldal' },
@@ -22,14 +36,6 @@ export class HeaderComponent implements OnInit {
     { title: 'Szolgáltatások', link: '/szolgaltatasok' },
     { title: 'Kapcsolat', link: '/kapcsolat' },
   ];
-
-  onLoginClick() {
-    console.log('Bejelentkezés');
-  }
-
-  onRegisterClick() {
-    console.log('Regisztráció');
-  }
 
   openLogin() {
     this.login.open(LoginComponent, {
@@ -42,7 +48,7 @@ export class HeaderComponent implements OnInit {
   openRegist() {
     this.login.open(RegistComponent, {
       width: '40%',
-      height: '90%',
+      height: '94%',
       data: 'right click',
     });
   }

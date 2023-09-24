@@ -3,10 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  background-color: rgb(45, 55, 71, 0.7);*/
   position: relative; /* A footer fix pozícióban lesz */
   left: 0;
   bottom: 0;
@@ -50,7 +46,7 @@
 /* Új CSS szabályok a mobil nézethez */
 @media (max-width: 768px) {
   .footer-container {
-    padding: 20px 0; /* Növeljük a padding-ot a mobil nézetben */
+    padding-top: 20px; /* Növeljük a padding-ot a mobil nézetben */
   }
 
   .contact-position {

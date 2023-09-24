@@ -3,3 +3,10 @@
   justify-content: center;
   margin: 0 auto;
 }
+
+@media (max-width: 600px) {
+  .map-mobil.google-map {
+    width: 500px;
+    height: 500px;
+  }
+}
