@@ -146,24 +146,24 @@ $mat-dark-theme-background: (
 // Theme Config
 
 body {
-  --primary-color: #2ca469;
-  --primary-lighter-color: #c0e4d2;
-  --primary-darker-color: #1b894c;
+  --primary-color: #63dd8c;
+  --primary-lighter-color: #d0f5dd;
+  --primary-darker-color: #47cf6f;
   --text-primary-color: #{$light-primary-text};
   --text-primary-lighter-color: #{$dark-primary-text};
-  --text-primary-darker-color: #{$light-primary-text};
+  --text-primary-darker-color: #{$dark-primary-text};
 }
 $mat-primary: (
-  main: #2ca469,
-  lighter: #c0e4d2,
-  darker: #1b894c,
-  200: #2ca469,
+  main: #63dd8c,
+  lighter: #d0f5dd,
+  darker: #47cf6f,
+  200: #63dd8c,
   // For slide toggle,
   contrast:
     (
-      main: $light-primary-text,
+      main: $dark-primary-text,
       lighter: $dark-primary-text,
-      darker: $light-primary-text,
+      darker: $dark-primary-text,
     ),
 );
 $theme-primary: mat.define-palette($mat-primary, main, lighter, darker);
@@ -172,38 +172,46 @@ body {
   --accent-color: #095256;
   --accent-lighter-color: #b5cbcc;
   --accent-darker-color: #05383c;
-  --text-accent-color: #{$light-primary-text};
+  --text-accent-color: #{$dark-primary-text};
   --text-accent-lighter-color: #{$dark-primary-text};
-  --text-accent-darker-color: #{$light-primary-text};
+  --text-accent-darker-color: #{$dark-primary-text};
+}
+body {
+  --accent-color: #aafffc;
+  --accent-lighter-color: #e6fffe;
+  --accent-darker-color: #90fffb;
+  --text-accent-color: #{$dark-primary-text};
+  --text-accent-lighter-color: #{$dark-primary-text};
+  --text-accent-darker-color: #{$dark-primary-text};
 }
 $mat-accent: (
-  main: #095256,
-  lighter: #b5cbcc,
-  darker: #05383c,
-  200: #095256,
+  main: #aafffc,
+  lighter: #e6fffe,
+  darker: #90fffb,
+  200: #aafffc,
   // For slide toggle,
   contrast:
     (
-      main: $light-primary-text,
+      main: $dark-primary-text,
       lighter: $dark-primary-text,
-      darker: $light-primary-text,
+      darker: $dark-primary-text,
     ),
 );
 $theme-accent: mat.define-palette($mat-accent, main, lighter, darker);
 
 body {
-  --warn-color: #db2e41;
-  --warn-lighter-color: #f4c0c6;
-  --warn-darker-color: #cd1d2a;
+  --warn-color: #a62222;
+  --warn-lighter-color: #e4bdbd;
+  --warn-darker-color: #8b1414;
   --text-warn-color: #{$light-primary-text};
   --text-warn-lighter-color: #{$dark-primary-text};
   --text-warn-darker-color: #{$light-primary-text};
 }
 $mat-warn: (
-  main: #db2e41,
-  lighter: #f4c0c6,
-  darker: #cd1d2a,
-  200: #db2e41,
+  main: #a62222,
+  lighter: #e4bdbd,
+  darker: #8b1414,
+  200: #a62222,
   // For slide toggle,
   contrast:
     (
@@ -260,12 +268,4 @@ $altTheme: (
   .mat-badge-content {
     font-family: "Roboto";
   }
-}
-
-.mat-checkbox {
-  color: $light-primary-text;
-}
-
-.mat-checkbox-label {
-  color: white;
 }

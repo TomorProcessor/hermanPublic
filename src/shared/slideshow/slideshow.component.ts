@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-slideshow',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./slideshow.component.css'],
 })
 export class SlideshowComponent {
-  images = ['assets/szoba1.jpg', 'assets/szoba2.jpg', 'assets/szoba3.jpg'];
+  @Input() images: string[] = [];
 }

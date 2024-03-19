@@ -5,4 +5,20 @@ import { Component } from '@angular/core';
   templateUrl: './about-b.component.html',
   styleUrls: ['./about-b.component.css'],
 })
-export class AboutBComponent {}
+export class AboutBComponent {
+  firstSlideshowImages = [
+    'assets/bszoba1.jpg',
+    'assets/bszoba2.jpg',
+    'assets/bszoba3.jpg',
+    'assets/bszoba4.jpg',
+    'assets/bfolyoso1.jpg',
+    'assets/bfolyoso2.jpg',
+    'assets/bkonyha1.jpg',
+    'assets/bkonyha2.jpg',
+  ];
+  secondSlideshowImages = [
+    'assets/btarsalgo.jpg',
+    'assets/bepulet.jpg',
+    'assets/budvar.jpg',
+  ];
+}

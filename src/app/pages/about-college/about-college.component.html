@@ -1,6 +1,6 @@
 <div class="container textbox">
   <div class="d-flex flex-column">
-    <h1 class="align-self">Névadónk</h1>
+    <h1 class="align-self subtitle">KI VOLT HERMAN OTTÓ?</h1>
     <p class="align-self-start">
       <img src="assets/herman_otto.jpg" class="float-start herman_otto" />
       {{ textherman | showMoreLess : showMoreHerman }}
@@ -15,20 +15,14 @@
 </div>
 
 <div class="container">
-  <h1 class="align-self memorian">In memorian</h1>
   <div class="row justify-content-center">
+    <h1 class="subtitle memorian">ELHUNYT MUNKATÁRSAINK</h1>
     <div class="col-md-6 mb-9 mobile-view">
       <div class="custom-box d-flex flex-column align-items-center">
         <img src="assets/megyeri_arpadne.jpg" class="img-fluid" />
         <h4>MEGYERI ÁRPÁDNÉ (1946-2006)</h4>
         <p class="align-self-start">
-          {{ textmegyeri | showMoreLess : showMoreMegyeri }}
-          <a
-            class="link-underline-dark"
-            href="javascript:;"
-            (click)="showMoreMegyeri = !showMoreMegyeri"
-            >{{ !showMoreMegyeri ? "Több" : "Kevesebb" }}</a
-          >
+          {{ textmegyeri }}
         </p>
       </div>
     </div>

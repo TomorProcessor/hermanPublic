@@ -11,6 +11,10 @@ import { MainComponent } from './main/main.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapComponent } from './map/map.component';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { QuestionsComponent } from './questions.component/questions.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   imports: [
@@ -19,6 +23,9 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     GoogleMapsModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    MatExpansionModule,
+    FormsModule,
+    MatCheckboxModule,
   ],
   declarations: [
     AboutServicesComponent,
@@ -29,6 +36,7 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     ForStudentsComponent,
     MainComponent,
     MapComponent,
+    QuestionsComponent,
   ],
   exports: [MapComponent],
 })

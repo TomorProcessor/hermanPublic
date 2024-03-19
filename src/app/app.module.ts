@@ -20,6 +20,7 @@ import { PagesModule } from './pages/pages.module';
 import { SharedModule } from '../shared/shared.module';
 import { AboutAComponent } from './pages/about-a/about-a.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { QuestionsComponent } from './pages/questions.component/questions.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/fooldal', pathMatch: 'full' },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'kollegiumrol', component: AboutCollegeComponent },
   { path: 'szolgaltatasok', component: AboutServicesComponent },
   { path: 'hallgatoknak', component: ForStudentsComponent },
+  { path: 'gyakorikerdesek', component: QuestionsComponent },
 ];
 
 @NgModule({

@@ -5,6 +5,15 @@
   border-radius: 0%;
 }
 
+.subtitle {
+  color: #095256; /* Szöveg színe, itt fehér */
+  text-align: left;
+  font-size: 35px;
+  display: inline-block;
+  font-weight: 600;
+  padding-bottom: 2%;
+}
+
 .custom-box img {
   height: 200px;
   margin-bottom: 2.5%;
@@ -18,12 +27,7 @@
 }
 
 .memorian {
-  width: 90%;
-  margin-left: 5%;
-}
-
-h4 {
-  font-weight: lighter;
+  margin-left: 10%;
 }
 
 @media (max-width: 600px) {

@@ -1,34 +1,22 @@
 <mat-toolbar>
-  <img src="assets/icon.png" />
+  <img src="assets/icon.png" height="70px" />
+  <img src="assets/hermanottokollegium.png" height="60px" />
 
   <!-- Mobil nézet: megjelenik egy menü ikon -->
-  <div class="menu-icon" (click)="toggleMenu()">
-    <button mat-button>
-      <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
+  <div class="menu-icon">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">
+      <i class="material-icons">menu</i>
     </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <ul class="menu-items-mobile d-flex">
+        <li class="d-flex" *ngFor="let item of menuItems">
+          <a class="link" mat-button [routerLink]="item.link">{{
+            item.title
+          }}</a>
+        </li>
+      </ul>
+    </mat-menu>
   </div>
-
-  <!-- Menüfülek a mobil nézethez -->
-  <ul
-    class="menu-items-mobile d-flex"
-    *ngIf="isMenuOpen"
-    [class.is-open]="isMenuOpen"
-    (click)="closeMenu()"
-  >
-    <li class="d-flex" *ngFor="let item of menuItems">
-      <a mat-button [routerLink]="item.link">{{ item.title }}</a>
-    </li>
-    <li class="button-mobile">
-      <div class="ms-auto button-container">
-        <button mat-icon-button matTooltip="Basic" (click)="openLogin()">
-          <span class="material-icons login-button"> login </span>
-        </button>
-        <button mat-icon-button matTooltip="Basic" (click)="openRegist()">
-          <span class="material-icons"> person </span>
-        </button>
-      </div>
-    </li>
-  </ul>
 
   <!-- Normál nézet: látható menüfülek -->
   <div class="menu-items">

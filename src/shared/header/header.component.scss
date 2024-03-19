@@ -1,10 +1,9 @@
 .mat-toolbar {
-  background-color: #05152cef;
+  background-color: #095256f3;
   color: white;
   font-size: 18px;
   top: 0;
   z-index: 100;
-  margin-bottom: 2%;
   font-weight: lighter;
   position: sticky;
 }
@@ -12,16 +11,16 @@
 .mat-toolbar a {
   text-decoration: none;
 }
+
 .custom-button {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
 .button-container {
   display: flex;
   justify-content: center; /* Középre igazítás vízszintesen */
-  gap: 10px; /* Távolság a gombok között */
+  gap: 5px; /* Távolság a gombok között */
 }
 
 /* Mobil nézet: menü ikon */
@@ -32,44 +31,32 @@
 /* Normál nézet: menüfülek */
 .menu-items {
   display: flex;
-  padding-left: 5%;
-  gap: 30px;
+  padding-left: 1%;
+  gap: 20px;
 }
 
 /* Mobil nézet: menüfülek */
-
-ul {
-  list-style-type: none;
-  height: 100%;
-  width: 100%;
-  margin: -10px;
-  padding: 0px;
-  margin-top: 5%;
-}
 
 .button-mobile {
   border: none;
 }
 
-li {
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
-  width: 35%;
-  margin-bottom: 10px;
-  margin-left: 33%;
-  justify-content: center;
-  border: solid 1px white;
-  border-radius: 40px;
+.menu-items-mobile {
+  display: flex;
+  flex-direction: column;
 }
 
-.menu-items-mobile {
-  display: none;
-  align-content: center;
-  flex-direction: column; /* Menüfülek függőleges elrendezése */
-  top: 8%; /* A menü ikon alatt jelennek meg */
-  position: absolute;
-  background-color: #05152c;
-  z-index: 101; /* Alapértelmezésben nem jelenik meg */
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 5%;
+  margin-left: 1%;
+}
+
+.link {
+  text-decoration: none;
 }
 
 /* Media query a mobil nézethez */
@@ -77,13 +64,13 @@ li {
   /* Mobil nézet: menü ikon */
   .menu-icon {
     display: flex;
-    align-items: center;
-    padding-left: 80%;
+    padding-left: 35%;
   }
 
   /* Menüfülek a mobil nézethez */
   .menu-items-mobile {
-    display: flex; /* Alapértelmezésben ne jelenjenek meg */
+    display: flex;
+    /* Alapértelmezésben ne jelenjenek meg */
   }
 
   .menu-items {
@@ -99,7 +86,11 @@ li {
     display: none;
   }
 
-  .buttons {
+  .button-container {
     display: none;
+  }
+
+  .mat-toolbar {
+    background-color: #095256;
   }
 }

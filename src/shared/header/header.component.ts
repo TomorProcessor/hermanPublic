@@ -10,23 +10,6 @@ import { RegistComponent } from '../regist/regist.component';
 })
 export class HeaderComponent implements OnInit {
   constructor(public login: MatDialog) {}
-  isMenuOpen: boolean = false;
-
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-
-    if (this.isMenuOpen) {
-      document.body.style.overflow = 'hidden'; // Görgetés letiltása
-    } else {
-      document.body.style.overflow = 'auto'; // Görgetés engedélyezése
-    }
-  }
-
-  closeMenu() {
-    this.isMenuOpen = false;
-    document.body.style.overflow = 'auto'; // Görgetés engedélyezése
-  }
-
   menuItems = [
     { title: 'Főoldal', link: '/fooldal' },
     { title: 'Kollégiumról', link: '/kollegiumrol' },
@@ -34,6 +17,7 @@ export class HeaderComponent implements OnInit {
     { title: 'A épület', link: '/a-epulet' },
     { title: 'B épület', link: '/b-epulet' },
     { title: 'Szolgáltatások', link: '/szolgaltatasok' },
+    { title: 'Gyakori kérdések', link: '/gyakorikerdesek' },
     { title: 'Kapcsolat', link: '/kapcsolat' },
   ];
 

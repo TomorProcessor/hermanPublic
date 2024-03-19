@@ -2,6 +2,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin-top: -15%;
 }
 .container {
   margin-top: 2.5%;
@@ -9,12 +10,13 @@
 ul {
   list-style-type: none;
 }
-ol {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+
+.card-title {
+  text-align: center;
 }
+
 li {
-  padding: 1%;
+  padding: 2%;
 }
 .news {
   font-size: large;
@@ -26,15 +28,100 @@ li {
   overflow: hidden;
 }
 
-.pic {
-  margin-top: 100px;
-  margin-left: 50px;
-  width: 500px;
-  height: auto;
-  border: solid 2px white;
-  opacity: 0.9;
-  border-bottom: solid 60px white;
+.main-container {
+  position: relative;
+  width: 100%; /* A tartóelem teljes szélességét elfoglalja */
+  max-width: 100%; /* A tartóelem szélességét igazítja a képhez */
 }
+.main-container .mainpic {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -10%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px; /* Opcionális belső tér a szöveg körül */
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  font-size: large;
+  z-index: 2;
+}
+
+.bottom-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Áttetsző háttérszín, itt az rgba színformátumot használjuk a szín átlátszóságának beállításához */
+  z-index: 1; /* A réteg a háttér alatt van */
+}
+
+.overlay-text p {
+  color: white;
+  font-size: 60px;
+  white-space: nowrap;
+  margin: 0; /* Ellenőrzi a bekezdés alapértelmezett marginját */
+}
+
+.image-container {
+  position: relative;
+}
+
+.icon {
+  margin-right: 2.5%;
+  color: #095256;
+  transform: scale(1.25);
+  margin-left: -3%;
+}
+
+.goto {
+  margin-left: 2%;
+  text-decoration: none;
+  color: #095256;
+  transform: scale(1.25);
+}
+
+.pic-subtitle {
+  color: black;
+  padding: 25px;
+  text-align: left;
+  width: fit-content;
+  margin-left: 60%;
+  display: inline-block;
+  font-size: 20px;
+  white-space: nowrap;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.pic {
+  margin-top: 5%;
+  width: 100%; /* A kép teljes szélessége */
+  height: auto; /* Automatikus magasság beállítása a képarány megtartása érdekében */
+  border-radius: 10px;
+}
+
+.text-wrapper {
+  padding: 20px; /* Opcionális: a szöveg körüli tér beállítása */
+  margin-left: 10px; /* Opcionális: a szöveg távolságának beállítása a képtől */
+}
+
 .waitlist {
   font-size: large;
   position: relative;
@@ -58,11 +145,12 @@ button {
 
 .welc {
   text-align: end;
+  font-style: italic;
 }
 
 h4 {
-  font-weight: lighter;
-  border-bottom: solid 1px white;
+  padding: 1.5%;
+  font-size: 20px;
 }
 
 @media (max-width: 600px) {

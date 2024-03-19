@@ -43,11 +43,10 @@ $materialstyle-theme: mat.define-light-theme(
 html,
 body {
   margin: 0;
-  color: white;
+  color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: rgb(5, 21, 44);
   /*
   background-image: url(assets/img4.jpg);
   background-repeat: no-repeat;
@@ -56,30 +55,31 @@ body {
 }
 
 h1 {
-  border-bottom: 1px solid white;
-  font-weight: lighter;
   padding-bottom: 5px;
 }
 
 .textbox {
-  /*background-color: rgba(0, 0, 0, 0.17);*/
   padding: 5%;
-  /* background: rgba(27, 35, 47, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;*/
   z-index: 50;
   width: 85%;
 }
 
+.subtitle {
+  color: #095256; /* Szöveg színe, itt fehér */
+  text-align: left;
+  font-size: 35px;
+  display: inline-block;
+  font-weight: 600;
+  padding-bottom: 2%;
+}
 .custom-box {
-  /*background: rgba(27, 35, 47, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /* background-color: white;
+  box-shadow: 0 8px 32px 0 #05152cef;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;*/
-  padding: 5%;
+  border-radius: 10px;
+  */
+  padding: 1%;
   z-index: 50;
   display: inline-block; /* Hozzáadva a blokkszintű elemek elrendezéséhez */
   width: 100%; /* Fix szélesség */
@@ -88,12 +88,11 @@ h1 {
 }
 
 a {
-  color: white;
-  font-weight: lighter;
+  color: black;
 }
 
 p {
-  font-weight: lighter;
+  color: black;
 }
 
 .container {
@@ -103,13 +102,9 @@ p {
 
 h2 {
   padding: 5%;
-  font-weight: lighter;
+  color: black;
 }
 
-ul {
-  font-weight: lighter;
-}
-
-li {
-  font-weight: lighter;
+h1 {
+  color: black;
 }

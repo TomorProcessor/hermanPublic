@@ -1,7 +1,13 @@
-ul {
-  list-style-type: none;
-}
-
 li {
   padding: 0.5%;
+  font-size: 20px;
+}
+
+.email {
+  color: #095256;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 20px;
 }
