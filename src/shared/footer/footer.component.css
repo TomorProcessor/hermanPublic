@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: center;
   background-color: #095256;
-  position: relative; /* A footer fix pozícióban lesz */
+  position: relative;
   left: 0;
   bottom: 0;
-  width: 100%; /* Teljes szélességű lesz */
+  width: 100%;
 }
 
 .szte {
@@ -30,6 +30,7 @@
 .contact-info div {
   display: flex;
   padding: 2.5%;
+  color: #474849;
 }
 
 h4 {
@@ -73,28 +74,20 @@ h4 {
   font-size: 10px;
 }
 
-/* footer.component.css */
-/* ... */
-
-/* Új CSS szabályok a mobil nézethez */
 @media (max-width: 768px) {
   .footer-container {
-    padding-top: 20px; /* Növeljük a padding-ot a mobil nézetben */
+    padding-top: 3px;
   }
-
-  .contact-position {
-    flex-direction: column; /* A contact sávok oszlopokba rendeződnek mobil nézetben */
-  }
-
-  .contact-column {
-    margin: 10px 0; /* Csökkentsük a sávok közötti térközt mobil nézetben */
+  .grey {
+    display: none;
   }
 
   .social-links {
-    font-size: 24px; /* Csökkentsük az ikonok méretét mobil nézetben */
+    font-size: 30px;
+    gap: 16px;
   }
 
   .footer-text {
-    font-size: 12px; /* Csökkentsük a szöveg méretét mobil nézetben */
+    font-size: 12px;
   }
 }

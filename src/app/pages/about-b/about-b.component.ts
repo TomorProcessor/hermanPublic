@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-about-b',
   templateUrl: './about-b.component.html',
-  styleUrls: ['./about-b.component.css'],
+  styleUrls: ['./about-b.component.scss'],
 })
 export class AboutBComponent {
   firstSlideshowImages = [
@@ -13,7 +13,7 @@ export class AboutBComponent {
     'assets/bszoba4.jpg',
     'assets/bfolyoso1.jpg',
     'assets/bfolyoso2.jpg',
-    'assets/bkonyha1.jpg',
+    'assets/bkonyha1.png',
     'assets/bkonyha2.jpg',
   ];
   secondSlideshowImages = [

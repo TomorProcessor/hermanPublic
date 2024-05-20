@@ -1,44 +1,253 @@
-<div class="container textbox">
+<app-header></app-header>
+<div class="container">
+  <div class="d-flex flex-column">
+    <h1 class="align-self subtitle">KOLLÉGIUMRÓL</h1>
+    <p class="align-self-start">
+      1972 március elején átadták az ország első, házaspárokat is fogadó
+      diákotthont. 1989-ig a József Attila Tudományegyetem Természettudományi
+      kar báziskollégiumaként, 1999-ig három, majd ezután négy kar hallgatóinak
+      helyet adó karközi kollégiumként működik. A diákotthon, a jó közösségi
+      életnek köszönhetően 1974-ben kollégium lett, majd 1979-és 1984-ben
+      „Kiváló Kollégium” címet adományozott az OFKB, 1999-ben pedig az „Év
+      Kollégiuma” díjat nyerte. 1997-től bővölt a Fürj u.-i épülettel, ami ma
+      már különálló kollégiumként működik. Itt kapott helyet a
+      Társadalomtudományi Szakkollégium is. A Kollégiumi Bizottság létrehozta a
+      Herman Ottó Diákegyesületet (HODIE), hogy a nehéz helyzetű, tehetséges
+      hallgatókat támogassa, tudományos, szakmai, közösségteremtő, kulturális és
+      sportprogramok szervezését elősegítse. Az öntevékeny csoportok, melyek
+      biztosítják a színes, mozgalmas életteli kollégiumot, a seniorok
+      felügyelete mellett végzik tevékenységüket. Nyáron szállodaként működünk,
+      de helyet biztosítunk a terepgyakorlaton, vagy kutatásban résztvevő
+      hallgatóknak is. Kollégiumunk tagja a Felsőoktatási Kollégiumok Országos
+      Szövetségének. Itt tekintheted meg:
+      <a href="http://www.fekosz.hu/">www.fekosz.hu</a>.
+    </p>
+  </div>
+</div>
+<div class="container">
   <div class="d-flex flex-column">
     <h1 class="align-self subtitle">KI VOLT HERMAN OTTÓ?</h1>
     <p class="align-self-start">
-      <img src="assets/herman_otto.jpg" class="float-start herman_otto" />
+      <img src="assets/herman_otto.jpg" class="float-start image" />
       {{ textherman | showMoreLess : showMoreHerman }}
-      <a
-        class="link-underline-dark"
-        href="javascript:;"
-        (click)="showMoreHerman = !showMoreHerman"
-        >{{ !showMoreHerman ? "Több" : "Kevesebb" }}</a
-      >
+      <a href="javascript:;" (click)="showMoreHerman = !showMoreHerman">{{
+        !showMoreHerman ? "Több" : "Kevesebb"
+      }}</a>
     </p>
   </div>
 </div>
 
 <div class="container">
-  <div class="row justify-content-center">
-    <h1 class="subtitle memorian">ELHUNYT MUNKATÁRSAINK</h1>
-    <div class="col-md-6 mb-9 mobile-view">
-      <div class="custom-box d-flex flex-column align-items-center">
-        <img src="assets/megyeri_arpadne.jpg" class="img-fluid" />
-        <h4>MEGYERI ÁRPÁDNÉ (1946-2006)</h4>
-        <p class="align-self-start">
-          {{ textmegyeri }}
-        </p>
+  <h1 class="subtitle">GÉPTEREM, HÁLÓZAT, KÁBEL-TV</h1>
+  <p></p>
+  <p>
+    Hálózatunk helye az SZTENET-ben:
+    <a href="https://u-szeged.hu/cc/tajekoztatok/sztenet-terkepe-140211">LINK</a
+    >.
+    {{ text | showMoreLess : showMoreText }}
+    <a href="javascript:;" (click)="showMoreText = !showMoreText">{{
+      !showMoreText ? "Több" : "Kevesebb"
+    }}</a>
+  </p>
+</div>
+
+<div class="container">
+  <div class="d-flex flex-column">
+    <h1 class="align-self subtitle">ELHUNYT MUNKATÁRSAINK</h1>
+    <h4>Dr. KOZMA LÁSZLÓ (1933-2013)</h4>
+    <p class="align-self-start">
+      <img src="assets/kozma_laszlo_2011.jpg" class="float-start image" />
+      {{ textkozma | showMoreLess : showMoreKozma }}
+      <a
+        class="link-underline-dark"
+        href="javascript:;"
+        (click)="showMoreKozma = !showMoreKozma"
+        >{{ !showMoreKozma ? "Több" : "Kevesebb" }}</a
+      >
+    </p>
+  </div>
+</div>
+<div class="container">
+  <div class="d-flex flex-column">
+    <h4>MEGYERI ÁRPÁDNÉ (1946-2006)</h4>
+    <p class="megyeri align-self-start">
+      <img src="assets/megyeri_arpadne.jpg" class="float-start imagemegyeri" />
+      {{ textmegyeri | showMoreLess : showMoreMegyeri }}
+      <a href="javascript:;" (click)="showMoreMegyeri = !showMoreMegyeri">{{
+        !showMoreMegyeri ? "Több" : "Kevesebb"
+      }}</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-6 g-4">
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri1.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1979</h5>
+          <p class="card-text">Kollégium díjátadás</p>
+        </div>
       </div>
     </div>
-    <div class="col-md-6 mb-9">
-      <div class="custom-box d-flex flex-column align-items-center">
-        <img src="assets/kozma_laszlo_2011.jpg" class="img-fluid" />
-        <h4>Dr. KOZMA LÁSZLÓ (1933-2013)</h4>
-        <p class="align-self-start">
-          {{ textkozma | showMoreLess : showMoreKozma }}
-          <a
-            class="link-underline-dark"
-            href="javascript:;"
-            (click)="showMoreKozma = !showMoreKozma"
-            >{{ !showMoreKozma ? "Több" : "Kevesebb" }}</a
-          >
-        </p>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri2.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1979</h5>
+          <p class="card-text">Kollégium díjátadás</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri3.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1985</h5>
+          <p class="card-text">Zalai kirándulás</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri4.jpg" class="card-img-top" width="40px" />
+        <div class="card-body">
+          <h5 class="card-title">1986</h5>
+          <p class="card-text">Ötödéves búcsúztató</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri5.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1987</h5>
+          <p class="card-text">DISNO</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri6.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1989</h5>
+          <p class="card-text">Ötödéves búcsúztató</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row row-cols-1 row-cols-md-6 g-4">
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri7.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1992</h5>
+          <p class="card-text">Húsz éves a Herman</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri8.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1992</h5>
+          <p class="card-text">Ötödéves búcsúztató</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri9.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1995</h5>
+          <p class="card-text">DISNO</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri10.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1997</h5>
+          <p class="card-text">Ötödéves búcsúztató</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri11.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1998</h5>
+          <p class="card-text">Ötödéves búcsúztató</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri12.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">1999</h5>
+          <p class="card-text">Zalai kirándulás</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row row-cols-1 row-cols-md-6 g-4">
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri13.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">2000</h5>
+          <p class="card-text">Kollégiumi kirándulás</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri14.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">2001</h5>
+          <p class="card-text">DISNO</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri15.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">2002</h5>
+          <p class="card-text">Pécsi kirándulás</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri16.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">2003</h5>
+          <p class="card-text">Karácsony</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri17.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">2004</h5>
+          <p class="card-text">Ötödéves búcsúztató</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-80">
+        <img src="assets/megyeri18.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">2005</h5>
+          <p class="card-text">DISNO</p>
+        </div>
       </div>
     </div>
   </div>

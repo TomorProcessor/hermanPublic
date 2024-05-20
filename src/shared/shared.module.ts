@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { SlideshowComponent } from 'src/shared/slideshow/slideshow.component';
@@ -18,16 +18,16 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { LoginComponent } from './login/login.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
-import {
-  FormControl,
-  Validators,
-  FormsModule,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { RegistComponent } from './regist/regist.component';
+import { GoogleMapsModule, MapCircle } from '@angular/google-maps';
+import { DateFormatPipe } from './pipes/dateFormat.pipe';
+import { HeaderForStudentsComponent } from './headerForStudents/headerForStudents.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -35,16 +35,20 @@ import { RegistComponent } from './regist/regist.component';
     FooterComponent,
     SlideshowComponent,
     ShowPipe,
-    LoginComponent,
-    RegistComponent,
+    DateFormatPipe,
+    DateFormatPipe,
+    HeaderForStudentsComponent,
   ],
   imports: [
+    FlexLayoutModule,
+    MatCardModule,
+    MatExpansionModule,
     RouterModule,
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatSidenavModule,
+    MatTabsModule,
     MatListModule,
     MatMenuModule,
     ReactiveFormsModule,
@@ -57,19 +61,22 @@ import { RegistComponent } from './regist/regist.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    GoogleMapsModule,
+    MatSidenavModule,
   ],
   exports: [
+    DateFormatPipe,
+    MatCardModule,
+    MatExpansionModule,
     SlideshowComponent,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatSidenavModule,
     MatListModule,
     MatMenuModule,
     FooterComponent,
     HeaderComponent,
-    LoginComponent,
-    RegistComponent,
+    HeaderForStudentsComponent,
     MatSlideToggleModule,
     ShowPipe,
     MatCheckboxModule,
@@ -79,6 +86,7 @@ import { RegistComponent } from './regist/regist.component';
     ReactiveFormsModule,
     NgIf,
     MatSelectModule,
+    MatSidenavModule,
   ],
 })
 export class SharedModule {}

@@ -2,18 +2,24 @@ ul {
   list-style-type: none;
 }
 
-h4 {
-  font-size: 20px;
-  padding: 5%;
+.card-title {
+  font-size: 18px;
   padding-bottom: 2%;
-  color: #63dd8c;
+  color: #474849;
 }
 
-button {
-  align-self: center;
-  margin-bottom: 4%;
+li {
+  color: #474849;
+  padding: 2%;
 }
 
-.check {
-  color: white;
+a {
+  color: #095256;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 16px;
+  }
 }

@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
   showMoreurban = false;
   showMoredummy = false;
 
-  textszakacs = `"A kollégium fekvése közlekedési szempontból nagyon jó. 800m-es
+  textszakacs = `A kollégium fekvése közlekedési szempontból nagyon jó. 800m-es
   körzetében két-három kisebb bolt is található, CBA, Coop és Spar. Az
   ötös troli és kilencvenes busz által elérhető a Tesco, Aldi, Penny és
   Lidl is. A 60Y és a 67Y-nal elérhető Szőregen a Szeged NOVA
@@ -26,9 +26,9 @@ export class MainComponent implements OnInit {
   megállója is van a kollégium mellett, amelynek a végállomása közel van
   az Aradi térhez. Ez a járat megáll a Dugonics téren, ahonnan elérhető
   a GTK mindkét épülete gyalog, és a 4-es villamosra átszállva Kecskés
-  irányába elérhető a Tanulmányi és Információs Központ."`;
+  irányába elérhető a Tanulmányi és Információs Központ.`;
 
-  texturban = `"Pár éves kollégiumi lakhatásom során rájöttem néhány dologra a Herman
+  texturban = `Pár éves kollégiumi lakhatásom során rájöttem néhány dologra a Herman
   Ottó Kollégium kapcsán, amiért ajánlom: Elsőnek említeném, a közösségi
   életet, melyben számos program segít a lakóknak, hogy megismerjék
   egymást. Valamint szórakozzanak, és kicsit kikapcsoljanak az egyetemi
@@ -39,15 +39,7 @@ export class MainComponent implements OnInit {
   pedig az elhelyezkedését emelném ki, igaz nincs túl közel számos
   egyetemi épülethez, de ettől függetlenül gyorsan meg lehet őket
   közelíteni, mivel sok, gyakran közlekedő busz van a kollégium
-  közvetlen közelében."`;
+  közvetlen közelében.`;
 
-  textdummy = `"Lorem Ipsum is simply dummy text of the printing and typesetting
-  industry. Lorem Ipsum has been the industry's standard dummy text ever
-  since the 1500s, when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book. It has survived not only
-  five centuries, but also the leap into electronic typesetting,
-  remaining essentially unchanged. It was popularised in the 1960s with
-  the release of Letraset sheets containing Lorem Ipsum passages, and
-  more recently with desktop publishing software like Aldus PageMaker
-  including versions of Lorem Ipsum."`;
+  textzalan = `Még 2021 őszén jelentkeztem a kollégiumba és már akkor is nyomós indokaim voltak, amik az évek előrehaladtával csak erősödött. Mindenek előtt fontos számomra a testmozgás, amire számos lehetőséget ad a kollégium. Szerintem egy teljesen jó alapfelszereltséggel bíró kondi terem, egy műfüves kisméretű foci/kézi/röplabda pálya, az 5 perc sétára lévő uszoda és a liget adta lehetőségek teljes mértékben kielégítik a sport iránti igényeket. A kollégiumi közösség bár folyamatosan változik, nem veszít a kedvességéből, és családi hangulatából. Külön szimpatikus a közösségi terek és programlehetőségek sokszínűsége. A megközelíthetősége szerintem teljesen rendben van, sűrűn járnak a buszok. Véleményem szerint a szobák berendezése összességében jó. Ezek alapján bátran merem ajánlani az egyetemista ismerőseimnek.`;
 }

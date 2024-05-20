@@ -14,7 +14,6 @@ export class AppComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Meghatározzuk, hogy a felhasználó görgetett-e lefelé
     if (window.pageYOffset > 100) {
       this.renderer.setStyle(
         this.el.nativeElement.querySelector('#backToTop'),
@@ -31,7 +30,6 @@ export class AppComponent {
   }
 
   scrollToTop() {
-    // Görgetés az oldal tetejére
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

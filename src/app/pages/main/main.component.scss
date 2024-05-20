@@ -4,6 +4,12 @@
   border-radius: 50%;
   margin-top: -15%;
 }
+
+a {
+  color: #095256;
+  text-decoration: none;
+}
+
 .container {
   margin-top: 2.5%;
 }
@@ -11,12 +17,20 @@ ul {
   list-style-type: none;
 }
 
+.none {
+  list-style-type: none;
+  margin-left: -5%;
+  color: #474849;
+}
+
 .card-title {
   text-align: center;
+  font-weight: normal;
 }
 
 li {
-  padding: 2%;
+  padding: 0.5%;
+  color: #474849;
 }
 .news {
   font-size: large;
@@ -30,8 +44,8 @@ li {
 
 .main-container {
   position: relative;
-  width: 100%; /* A tartóelem teljes szélességét elfoglalja */
-  max-width: 100%; /* A tartóelem szélességét igazítja a képhez */
+  width: 100%;
+  max-width: 100%;
 }
 .main-container .mainpic {
   width: 100%;
@@ -49,7 +63,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  padding: 10px; /* Opcionális belső tér a szöveg körül */
+  padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
   text-align: center;
@@ -63,20 +77,21 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Áttetsző háttérszín, itt az rgba színformátumot használjuk a szín átlátszóságának beállításához */
-  z-index: 1; /* A réteg a háttér alatt van */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .overlay-text p {
   color: white;
   font-size: 60px;
   white-space: nowrap;
-  margin: 0; /* Ellenőrzi a bekezdés alapértelmezett marginját */
+  margin: 0;
+}
+
+.welcome {
+  font-size: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .image-container {
@@ -84,17 +99,14 @@ li {
 }
 
 .icon {
-  margin-right: 2.5%;
+  padding-right: 7%;
+  padding-left: 2%;
   color: #095256;
-  transform: scale(1.25);
-  margin-left: -3%;
+  transform: scale(1.2);
 }
 
-.goto {
-  margin-left: 2%;
-  text-decoration: none;
-  color: #095256;
-  transform: scale(1.25);
+.card-title {
+  color: #474849;
 }
 
 .pic-subtitle {
@@ -112,14 +124,14 @@ li {
 
 .pic {
   margin-top: 5%;
-  width: 100%; /* A kép teljes szélessége */
-  height: auto; /* Automatikus magasság beállítása a képarány megtartása érdekében */
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
 .text-wrapper {
-  padding: 20px; /* Opcionális: a szöveg körüli tér beállítása */
-  margin-left: 10px; /* Opcionális: a szöveg távolságának beállítása a képtől */
+  padding: 20px;
+  margin-left: 10px;
 }
 
 .waitlist {
@@ -146,6 +158,8 @@ button {
 .welc {
   text-align: end;
   font-style: italic;
+  font-size: 19px;
+  padding-right: 3%;
 }
 
 h4 {
@@ -153,21 +167,32 @@ h4 {
   font-size: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .custom-box {
     flex: row;
     width: 100%;
   }
 
+  .icon {
+    display: none;
+  }
+
+  .welcome {
+    font-size: 17px;
+  }
+
+  .welc {
+    font-size: 17px;
+  }
+
+  .card {
+    width: 400px;
+    margin-left: 5%;
+  }
+
   .container.textbox {
     width: 90%;
     padding: 5%;
-  }
-
-  .container {
-    padding: 0px;
-    width: 90%;
-    margin-bottom: 5px;
   }
 
   .text {

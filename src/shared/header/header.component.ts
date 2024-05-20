@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { LoginComponent } from '../login/login.component';
-import { RegistComponent } from '../regist/regist.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,33 +7,19 @@ import { RegistComponent } from '../regist/regist.component';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(public login: MatDialog) {}
   menuItems = [
-    { title: 'Főoldal', link: '/fooldal' },
-    { title: 'Kollégiumról', link: '/kollegiumrol' },
-    { title: 'Hallgatóknak', link: '/hallgatoknak' },
-    { title: 'A épület', link: '/a-epulet' },
-    { title: 'B épület', link: '/b-epulet' },
-    { title: 'Szolgáltatások', link: '/szolgaltatasok' },
-    { title: 'Gyakori kérdések', link: '/gyakorikerdesek' },
-    { title: 'Kapcsolat', link: '/kapcsolat' },
+    { title: 'Főoldal', link: '/' },
+    { title: 'Kollégiumról', link: '/about-college' },
+    { title: 'Szabályzat', link: '/for-students' },
+    { title: 'A épület', link: '/about-a' },
+    { title: 'B épület', link: '/about-b' },
+    { title: 'Szolgáltatások', link: '/about-services' },
+    { title: 'Gyakori kérdések', link: '/questions' },
+    { title: 'Vendégkönyv', link: '/guest' },
+    { title: 'Kapcsolat', link: '/contact' },
   ];
 
-  openLogin() {
-    this.login.open(LoginComponent, {
-      width: '30%',
-      height: '50%',
-      data: 'right click',
-    });
-  }
-
-  openRegist() {
-    this.login.open(RegistComponent, {
-      width: '40%',
-      height: '94%',
-      data: 'right click',
-    });
-  }
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 }

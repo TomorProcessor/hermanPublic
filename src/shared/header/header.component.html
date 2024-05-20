@@ -1,37 +1,64 @@
-<mat-toolbar>
-  <img src="assets/icon.png" height="70px" />
-  <img src="assets/hermanottokollegium.png" height="60px" />
-
-  <!-- Mobil nézet: megjelenik egy menü ikon -->
-  <div class="menu-icon">
-    <button mat-button [matMenuTriggerFor]="beforeMenu">
-      <i class="material-icons">menu</i>
-    </button>
-    <mat-menu #beforeMenu="matMenu" xPosition="before">
-      <ul class="menu-items-mobile d-flex">
-        <li class="d-flex" *ngFor="let item of menuItems">
-          <a class="link" mat-button [routerLink]="item.link">{{
-            item.title
-          }}</a>
-        </li>
-      </ul>
-    </mat-menu>
+<mat-toolbar role="navigation">
+  <div id="menuToggle">
+    <input class="mobile-item" type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/"> Főoldal</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-college">Kollégiumról</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/for-students">Szabályzat</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-a">A épület</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-b"> B épület</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-services">Szolgáltatások</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/questions">Gyakori kérdések</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/guest">Vendégkönyv</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/contact"> Kapcsolat</a>
+      </li>
+    </ul>
   </div>
 
-  <!-- Normál nézet: látható menüfülek -->
+  <img class="icon" src="assets/icon.png" height="70px" />
+  <img class="kollegium" src="assets/hermanottokollegium.png" height="60px" />
   <div class="menu-items">
     <a *ngFor="let item of menuItems" mat-button [routerLink]="item.link">{{
       item.title
     }}</a>
   </div>
 
-  <!--Gombok-->
-  <div class="ms-auto button-container buttons">
-    <button mat-icon-button matTooltip="Basic" (click)="openLogin()">
-      <span class="material-icons login-button"> login </span>
-    </button>
-    <button mat-icon-button matTooltip="Basic" (click)="openRegist()">
-      <span class="material-icons"> person </span>
-    </button>
-  </div>
+  <button
+    [routerLink]="'/login'"
+    style="color: white"
+    mat-raised-button
+    color="primary"
+    class="button-container"
+  >
+    Bejelentkezés
+  </button>
+  <button
+    [routerLink]="'/login'"
+    style="color: white"
+    mat-raised-button
+    color="primary"
+    class="mobile-button"
+  >
+    <mat-icon>login</mat-icon>
+  </button>
 </mat-toolbar>

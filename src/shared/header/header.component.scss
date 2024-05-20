@@ -4,7 +4,6 @@
   font-size: 18px;
   top: 0;
   z-index: 100;
-  font-weight: lighter;
   position: sticky;
 }
 
@@ -17,28 +16,26 @@
   align-items: center;
 }
 
+.menu-items-mobile {
+  display: none;
+}
+
 .button-container {
-  display: flex;
-  justify-content: center; /* Középre igazítás vízszintesen */
-  gap: 5px; /* Távolság a gombok között */
+  margin-left: 60px;
 }
 
-/* Mobil nézet: menü ikon */
+.mobile-button {
+  display: none;
+}
+
 .menu-icon {
-  display: none; /* Alapértelmezésben nem jelenik meg */
+  display: none;
 }
 
-/* Normál nézet: menüfülek */
 .menu-items {
   display: flex;
-  padding-left: 1%;
-  gap: 20px;
-}
-
-/* Mobil nézet: menüfülek */
-
-.button-mobile {
-  border: none;
+  padding-left: 0.5%;
+  gap: 10px;
 }
 
 .menu-items-mobile {
@@ -46,51 +43,150 @@
   flex-direction: column;
 }
 
-ul {
-  list-style-type: none;
-}
-
-li {
-  padding: 5%;
-  margin-left: 1%;
+.mobile-item {
+  text-decoration: none;
+  color: #474849;
+  display: none;
 }
 
 .link {
   text-decoration: none;
 }
 
-/* Media query a mobil nézethez */
-@media (max-width: 600px) {
-  /* Mobil nézet: menü ikon */
-  .menu-icon {
-    display: flex;
-    padding-left: 35%;
-  }
+.menu-icon {
+  display: none;
+}
 
-  /* Menüfülek a mobil nézethez */
-  .menu-items-mobile {
-    display: flex;
-    /* Alapértelmezésben ne jelenjenek meg */
-  }
-
-  .menu-items {
-    display: none;
-    /* A normál nézetben jelenjenek meg a menüfülek */
-  }
-
-  .menu-icon.is-open .menu-items-mobile {
-    display: flex;
-  }
-
-  .menu-icon.is-open .menu-items {
-    display: none;
-  }
-
+@media (max-width: 768px) {
   .button-container {
     display: none;
   }
+  .kollegium {
+    display: none;
+  }
+  .mobile-button {
+    display: flex;
+    margin-left: 80%;
+  }
+  .icon {
+    display: none;
+  }
+}
 
-  .mat-toolbar {
-    background-color: #095256;
+@media (max-width: 1500px) {
+  .mobile-item {
+    display: flex;
+  }
+  .menu-items-mobile {
+    display: flex;
+  }
+  .menu-items {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .icon {
+    margin-left: 50px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1e1e23;
+    opacity: 1;
+    font-weight: lighter;
+    transition: 200ms;
+  }
+  a:hover {
+    opacity: 0.5;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  #menuToggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5px;
+    left: 25px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle input {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  #menuToggle span {
+    display: flex;
+    width: 29px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #36383f;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  #menu {
+    position: absolute;
+    width: 200px;
+    height: 600px;
+    box-shadow: 0 0 10px #85888c;
+    border-radius: 5px;
+    margin: -50px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background-color: #fbfbfb;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    transition-delay: 2s;
+  }
+
+  #menuToggle input:checked ~ ul {
+    transform: none;
   }
 }
