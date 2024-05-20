@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "szakdoga-395209": {
+      "hosting": {
+        "kollegium-projekt": [
+          "szakdoga-395209"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "szakdoga-395209"
+  }
+}

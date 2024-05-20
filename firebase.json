@@ -1,0 +1,24 @@
+{
+  "hosting": [
+    {
+      "target": "kollegium-projekt",
+      "public": "dist/kollegium-projekt",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    }
+  ],
+  "config": {
+    "hosting": {
+      "kollegium-projekt": {
+        "production": {
+          "public": "dist/kollegium-projekt",
+          "rewrites": [
+            {
+              "source": "**",
+              "destination": "/index.html"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
