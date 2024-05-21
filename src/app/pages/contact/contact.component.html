@@ -1,40 +1,45 @@
+<app-header></app-header>
+<div class="container opinions">
+  <h1 class="subtitle">ERRE TALÁLSZ MEG MINKET!</h1>
+  <div class="my-google-map">
+    <google-map [width]="null" [height]="null" [options]="mapOptions">
+      <map-marker [position]="marker1.position"></map-marker>
+      <map-marker [position]="marker2.position"></map-marker>
+    </google-map>
+  </div>
+</div>
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6 mb-4">
-      <div
-        class="custom-box d-flex flex-column align-items-center contact-info"
-      >
-        <img src="assets/dummy.png" class="img-fluid" />
-        <h4>Herman Ottó kollégium „A” épület</h4>
+      <div class="custom-box d-flex flex-column align-self-start contact-info">
+        <h1 class="subtitle">HERMAN OTTÓ KOLLÉGIUM „A” ÉPÜLET</h1>
         <div>
           <mat-icon class="icon">location_on</mat-icon>
-          <span>Szeged, Temesvári krt. 50-52. 6726</span>
+          <span class="mobile">Szeged, Temesvári krt. 50-52. 6726</span>
         </div>
         <div>
           <mat-icon class="icon">mail</mat-icon>
-          <span>iroda@ohsh.u-szeged.hu</span>
+          <span class="mobile">iroda@ohsh.u-szeged.hu</span>
         </div>
         <div>
           <mat-icon class="icon">phone</mat-icon>
-          <span>Porta: +36 62 544 309</span>
+          <span class="mobile">Porta: +36 62 544 309</span>
         </div>
         <div>
           <mat-icon class="icon">phone</mat-icon>
-          <span>Iroda: +36 62 544 311</span>
+          <span class="mobile">Iroda: +36 62 544 311</span>
         </div>
         <div>
           <mat-icon class="icon">phone</mat-icon>
-          <span>Gondnokság: +36 62 544 310/304</span>
+          <span class="mobile">Gondnokság: +36 62 544 310/304</span>
         </div>
       </div>
     </div>
 
     <div class="col-md-6 mb-4">
-      <div
-        class="custom-box d-flex flex-column align-items-center contact-info"
-      >
-        <img src="assets/dummy.png" class="img-fluid" />
-        <h4>Herman Ottó kollégium „B” épület</h4>
+      <div class="custom-box d-flex flex-column align-self-start contact-info">
+        <h1 class="subtitle">HERMAN OTTÓ KOLLÉGIUM „B” ÉPÜLET</h1>
         <div>
           <mat-icon class="icon">location_on</mat-icon>
           <span>Szeged, Fürj utca 51.6726</span>
@@ -48,6 +53,105 @@
           <span>Telefon: +36 62 544-310/301</span>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="subtitle">LINKTÁR</h1>
+      <p>
+        Ha most jelentkeztél az egyetemre és még nem ismered Szegedet, akkor itt
+        van néhány link amivel szeretnénk neked segíteni!
+      </p>
+
+      <h4>
+        <mat-icon class="icon">school</mat-icon>Egységes Tanulmányi Rendszer
+      </h4>
+      <ul>
+        <li>
+          <a href="https://neptun.szte.hu/" target="_blank">NEPTUN</a>
+        </li>
+        <li>
+          <a href="https://modulo.etr.u-szeged.hu/" target="_blank">Modulo</a>
+        </li>
+        <li>
+          <a href="https://www.coosp.etr.u-szeged.hu/" target="_blank"
+            >Coospace</a
+          >
+        </li>
+      </ul>
+      <h4><mat-icon class="icon">apartment</mat-icon>Karközi Kollégiumok</h4>
+      <ul>
+        <li>
+          <a href="https://u-szeged.hu/felvettek/neptun-belepes" target="_blank"
+            >Eötvös Loránd Kollégium</a
+          >
+        </li>
+        <li>
+          <a href="http://mksh.u-szeged.hu/" target="_blank"
+            >Károlyi Mihály Kollégium</a
+          >
+        </li>
+        <li>
+          <a href="https://www.mora.u-szeged.hu/" target="_blank"
+            >Móra Ferenc Kollégium</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://www.halom.u-szeged.hu/www.halom.u-szeged.hu/index.html"
+            target="_blank"
+            >Öthalmi Diáklakások</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4><mat-icon class="icon">local_bar</mat-icon>Szórakozás</h4>
+      <ul>
+        <li><a href="https://jateklub.com/" target="_blank">JATE Klub</a></li>
+        <li>
+          <a href="https://www.cinemacity.hu/#/" target="_blank"
+            >Cinema City-Szeged</a
+          >
+        </li>
+        <li>
+          <a href="https://belvarosimozi.hu/" target="_blank">Belvárosi mozi</a>
+        </li>
+        <li>
+          <a href="https://www.hungiszeged.hu/" target="_blank">Hungi Vígadó</a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/szegedikocsma/?locale=hu_HU"
+            target="_blank"
+            >Nyugi Kert</a
+          >
+        </li>
+      </ul>
+      <h4><mat-icon class="icon">pin_drop</mat-icon>Menetrend</h4>
+      <ul>
+        <li>
+          <a href="https://www.elvira.hu/" target="_blank">Vasúti menetrend</a>
+        </li>
+        <li>
+          <a href="https://www.menetrendek.hu/" target="_blank"
+            >Busz menetrend</a
+          >
+        </li>
+        <li><a href="https://szkt.hu/" target="_blank">Szkt menetrend</a></li>
+      </ul>
+      <h4><mat-icon class="icon">link</mat-icon>Egyéb linkek</h4>
+      <ul>
+        <li>
+          <a href="https://szteshop.hu/" target="_blank">SZTE Ajándékbolt</a>
+        </li>
+        <li>
+          <a href="http://www.ek.szte.hu/" target="_blank">Egyetemi könyvtár</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

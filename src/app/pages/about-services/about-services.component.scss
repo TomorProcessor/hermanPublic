@@ -1,0 +1,19 @@
+li {
+  padding: 0.5%;
+}
+
+.email {
+  color: #095256;
+  text-decoration: underline;
+}
+
+ul {
+  color: #474849;
+  list-style-type: square;
+}
+
+@media (max-width: 768px) {
+  .title {
+    margin-top: 6.5%;
+  }
+}

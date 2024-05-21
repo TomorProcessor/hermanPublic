@@ -1,30 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
-
   menuItems = [
-    { title: 'Főoldal', link: '/main' },
+    { title: 'Főoldal', link: '/' },
     { title: 'Kollégiumról', link: '/about-college' },
-    { title: 'Hallgatóknak', link: '/for-students' },
+    { title: 'Szabályzat', link: '/for-students' },
     { title: 'A épület', link: '/about-a' },
     { title: 'B épület', link: '/about-b' },
     { title: 'Szolgáltatások', link: '/about-services' },
+    { title: 'Gyakori kérdések', link: '/questions' },
+    { title: 'Vendégkönyv', link: '/guest' },
     { title: 'Kapcsolat', link: '/contact' },
   ];
 
-  onLoginClick() {
-    console.log('Bejelentkezés');
-  }
-
-  onRegisterClick() {
-    console.log('Regisztráció');
-  }
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 }

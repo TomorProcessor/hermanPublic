@@ -1,0 +1,118 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination .page-link {
+  color: #095256;
+}
+
+.card {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.icon {
+  padding-right: 3%;
+}
+
+.inputs {
+  width: 500px;
+}
+
+.subtitle {
+  margin-top: 3%;
+  margin-left: 5%;
+  padding-bottom: 2%;
+}
+
+.news-container {
+  padding: 5%;
+  padding-top: 0%;
+  padding-bottom: 1%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 5px 0;
+  top: 0;
+  text-align: left;
+  color: rgb(129, 132, 132);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.helpForAdmins {
+  color: rgb(129, 132, 132);
+  margin-bottom: 5%;
+  margin-top: 2.5%;
+  margin-left: 3%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.borderbottom {
+  color: rgb(87, 88, 88);
+  border-bottom: 2px solid rgba(129, 132, 132, 0.686);
+  padding: 15px 0;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+.inputs {
+  width: 300px;
+}
+
+.title {
+  color: #095256;
+  text-align: left;
+  font-size: 35px;
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 2%;
+  padding-bottom: 2%;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    display: block;
+    width: 350px;
+    margin-left: 15%;
+    padding-bottom: 2%;
+  }
+
+  .news-container {
+    display: block;
+  }
+
+  .comment_button {
+    margin-bottom: 5%;
+  }
+
+  .date {
+    padding-top: 5%;
+    font-size: 18px;
+  }
+
+  .inputs {
+    margin-top: 5%;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .icon {
+    transform: scale(0.9);
+    margin-right: 5%;
+  }
+}

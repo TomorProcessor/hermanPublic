@@ -1,0 +1,311 @@
+<app-header></app-header>
+<div class="container">
+  <h1 class="subtitle">ÚTMUTATÓ KOLLÉGIUMI JELENTKEZÉSHEZ</h1>
+  <p>
+    A kollégiumi jelentkezés a Modulo weboldalán lehet, melyet itt érhetsz el:
+    <a
+      href="https://modulo.etr.u-szeged.hu/Modulo2/default/login?requested=%2fModulo2%2fdefault%2fhome"
+      >LINK</a
+    >
+    . A Modulo bejelentkezés után ezt a dokumentumot kell először kitölteni:
+    „(HSZI) Általános szociális helyzetfelmérési adatlap”-ot. A dokumentum
+    kitöltésének megkezdéséhez, a kitöltés gombra kattints.
+  </p>
+  <img class="center" src="assets/modulo2.png" />
+  <p>
+    A szükséges adatok és dokumentumok megadása után „Beadás” gombra kattintva
+    küldöd el. Beadás után a főmenünél „Folyamatban” mappában látható a
+    dokumentum. A kollégiumhoz ismét az „Általános szociális helyzetfelmérési
+    adatlapot”-ot kell megnyitnod és a tetején látható egy „Csatolt űrlap
+    kitöltése” itt tudod kiválasztani a kollégiumi jelentkezést, ahol csak ki
+    kell jelölnöd a kollégiumunkat és más dolgot már nincs. Az elhelyezésed után
+    a Modulo főmenüjében a „Lezárt” mappában fogod megtalálni az általad beadott
+    dokumentumokat.
+  </p>
+  <img class="center" src="assets/modulo1.png" />
+</div>
+<div class="container">
+  <h1 class="subtitle">GYAKORI KÉRDÉSEK</h1>
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>Hogy lehet megközelíteni a Hermant? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        “A” épület: Legkönnyebben a 72-es és 32-es busszal, de a 60-as, 67-es és
+        71-es buszoknak is van a közelben megállójuk.
+      </p>
+      <p>
+        “B” épület: Öt perc sétára van a 71-es busz megállója, de tíz perc
+        sétával a 72-es, 32-es, 90-es buszok is elérhetőek.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title
+          >Hogyan juthatok el az egyetemi épületekhez?</mat-panel-title
+        >
+      </mat-expansion-panel-header>
+      <p>
+        A Biológia Intézet 5 perc sétára van tőlünk, a Kémia- és Bolyai Intézet,
+        valamint az Irinyi épület egymás közelében helyezkednek el, amit a 72-es
+        és 32-es busz + 2-es villamos járatokkal közelítheted meg 15 percen
+        belül. A TIK-hez, ÁJTK és GTK épületekhez a 32-es busz közvetlenül
+        odavisz. Van jól kiépített bicikli- és gyalogosútvonal is ezekhez az
+        épületekhez.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>Milyen boltok vannak a közelben? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+         “A” épület: A szomszéd utcában van egy kis élelmiszerbolt, egy sarokkal
+        arrébb egy Coop. A másik irányban szintén Újszegeden van egy Spar, és a
+        Torontál téren van egy kisbolt és egy dohánybolt is.
+      </p>
+      <p>
+        “B” épület: A szomszédos utcában található egy kisbolt, dohánybolt,
+        zöldséges, nem messze tőlük egy gyógyszertár. Tíz perc sétával egy Coop
+        is megközelíthető.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Kik lakhatnak a Hermanban? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Aktív hallgatói jogviszonnyal rendelkező SZTE-s hallgatók. Főképpen
+        olyan hallgatókat fogadunk be, akiknek nincs kijelölt kari kollégiumuk
+        (TTIK, BTK, GTK, ÁJTK karokról), vagy nem kerültek be a saját kari
+        kollégiumukba.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Kik laknak a „B” épületben? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        A „B” épületben főleg a mesterszakos és PhD képzésesek laknak, de
+        kerülnek be alapszakos hallgatók is.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Lehet saját bútort, elektronikai eszközt bevinni a szobába?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Csakis előzetes engedély szerzésével, de igen.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Milyen elektronikus eszközöket hozhatok be?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Laptop és számítógép, illetve töltők hozhatóak gond nélkül, nagyobb
+        teljesítményű eszközök (vízforraló, szendvicssütő, air fryer)
+        bejelentéskötelezettek a 10. emeleten tartózkodó gondnoknál.
+        Nagyteljesítményű rezsó stb. nem hozhatóak be!
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Lehet dekorálni a szobákat? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Ha a dekoráció nem tesz kárt a szoba felszerélésében (falfestés, bútorok
+        stb.) akkor szabadon dekorálható.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Eldönthetem, hogy kivel szeretnék egy szobában lakni?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Igen, a kollégiumi jelentkezés során, illetve a gólyatáboron külön
+        jelezve is figyelembe vesszük, hogy ki kivel szeretne együtt lakni.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Mi alapján lehet felvételt nyerni a Hermanba?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        A felvétel során tanulmányi és szociális pontokat együttesen veszünk
+        figyelembe.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Mennyi időre szól egy felvétel a Hermanba?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        A kollégiumi férőhelyre évente kell újrafelvételizni. Felsősöknek
+        májusban, elsősöknek augusztusban van erre kijelölt jelentkezési
+        időszakja.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Nem kerültem be a felvételi eljárás során. Mit tegyek?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Sikertelen felvétel esetén van lehetőség fellebbezésre is. A fellebbezés
+        során indokolni kell, miért fontos számodra a kollégiumi felvétel,
+        igazolásokkal. Amennyiben a fellebbezés se volt eredményes, akkor
+        várólistás jelentkezést kell leadni, ehhez a megfelelő űrlapokat ki kell
+        tölteni és elküldeni az
+        <a>adminisztracio@ohsh.u-szeged.hu</a> e-mail címre. Az űrlapok a
+        kollégium weboldalán elérhetőek.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Mennyit kell fizetni a kollégiumért?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Állami ösztöndíjas hallgatónak egy hónapra 9320 Ft, amit a Neptun
+        rendszerén belül a Pénzügyek/ Befizetés opción keresztül kell befizetni.
+        Önköltséges képzés esetén 9915 Ft.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Ki takarít a Hermanban? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        A folyosók, mosdóhelyiségek, konyhák és tanulószobák takarítását az
+        üzemeltetés kijelölt takarítói intézik. A szobákat a lakók saját
+        maguknak takarítják, tisztaságukat kéthavonta egyszer ellenőrzik, előre
+        kiírt időpontokban.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Van biciklitárolója a Hermannak? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Van egy zárható belső biciklitárolónk, amit ingyenesen használhat minden
+        kollégiumi lakó. Ezenkívül külső biciklitárolónk is van.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Hol lehet dohányozni? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Az “A” épület minden páros szintjén található kijárat a vészlépcsőházba,
+        itt vannak kijelölt dohányzóhelyek, illetve a kollégium környékén is
+        találhatók erre a célra kijelölt helyek. A “B” épületnél az épület előtt
+        van kijelölt dohányzóhely.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Szabad barátokat bevinni, aludhatnak bent?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Mindkét épületben reggel 8-22 óra között történhet vendégfogadás, a
+        vendégkönyv vezetése és személyi igazolvány leadása mellett. Itt alvási
+        lehetőségről térítéskötelezettség mellett a senioroktól vagy a portán
+        lehet engedélyt kérni 22 óráig, melyhez a szobatársak beleegyezése is
+        szükséges.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Van a hermanosoknak internet hozzáférésük?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        A kollégium minden lakójának rendelkezésre áll vezetékes internet, amely
+        100 mbit/sec sávszélességet biztosít. Minden szobában személyenként 1 db
+        fali csatlakozó található, amelyet előzetes regisztráció után lehet
+        használni. Ezekhez kábelt mindenkinek magának kell hoznia.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Van Wi-Fi a Hermanban? </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        A vendéglakásokban megszálló vendégeinknek biztosítunk Wi-Fi
+        kapcsolatot, a többieknek nem, de nekik lehetőségük van saját router-t
+        hozni, és használni.
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

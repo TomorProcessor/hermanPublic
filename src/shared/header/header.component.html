@@ -1,23 +1,64 @@
-<mat-toolbar color="primary">
-  <img src="assets/icon.png" />
-  <!-- Mobil nézet: megjelenik egy menü ikon -->
-  <div class="menu-icon">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
+<mat-toolbar role="navigation">
+  <div id="menuToggle">
+    <input class="mobile-item" type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/"> Főoldal</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-college">Kollégiumról</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/for-students">Szabályzat</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-a">A épület</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-b"> B épület</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/about-services">Szolgáltatások</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/questions">Gyakori kérdések</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/guest">Vendégkönyv</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/contact"> Kapcsolat</a>
+      </li>
+    </ul>
   </div>
 
-  <!-- Normál nézet: látható menüfülek -->
+  <img class="icon" src="assets/icon.png" height="70px" />
+  <img class="kollegium" src="assets/hermanottokollegium.png" height="60px" />
   <div class="menu-items">
     <a *ngFor="let item of menuItems" mat-button [routerLink]="item.link">{{
       item.title
     }}</a>
   </div>
-</mat-toolbar>
 
-<!-- Menü tartalma -->
-<mat-menu #menu="matMenu">
-  <a *ngFor="let item of menuItems" mat-menu-item [routerLink]="item.link">{{
-    item.title
-  }}</a>
-</mat-menu>
+  <button
+    [routerLink]="'/login'"
+    style="color: white"
+    mat-raised-button
+    color="primary"
+    class="button-container"
+  >
+    Bejelentkezés
+  </button>
+  <button
+    [routerLink]="'/login'"
+    style="color: white"
+    mat-raised-button
+    color="primary"
+    class="mobile-button"
+  >
+    <mat-icon>login</mat-icon>
+  </button>
+</mat-toolbar>

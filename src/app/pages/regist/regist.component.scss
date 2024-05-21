@@ -1,0 +1,52 @@
+.card {
+  width: 700px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  width: 300px;
+}
+
+.subtitle {
+  padding-top: 5%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.form-item {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    display: block;
+    margin-left: 15%;
+  }
+
+  .form-item {
+    width: 80%;
+  }
+
+  .buttons {
+    margin-bottom: 5%;
+  }
+
+  .card {
+    width: auto;
+    height: 700px;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,7 +1,9 @@
-<ngb-carousel *ngIf="images">
-  <ng-template ngbSlide *ngFor="let imageUrl of images">
-    <div class="picsum-img-wrapper">
-      <img [src]="imageUrl" />
-    </div>
-  </ng-template>
-</ngb-carousel>
+<div class="size">
+  <ngb-carousel *ngIf="images" class="small-carousel">
+    <ng-template ngbSlide *ngFor="let imageUrl of images">
+      <div class="d-flex justify-content-center">
+        <img [src]="imageUrl" />
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

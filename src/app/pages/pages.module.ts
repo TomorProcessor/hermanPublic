@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/shared/shared.module';
-import { AboutServicesComponent } from './about-services/about-services.component';
-import { AboutBComponent } from './about-b/about-b.component';
-import { AboutCollegeComponent } from './about-college/about-college.component';
-import { AboutAComponent } from './about-a/about-a.component';
-import { ContactComponent } from './contact/contact.component';
-import { ForStudentsComponent } from './for-students/for-students.component';
-import { MainComponent } from './main/main.component';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
-  imports: [CommonModule, SharedModule],
-  declarations: [
-    AboutServicesComponent,
-    AboutBComponent,
-    AboutCollegeComponent,
-    AboutAComponent,
-    ContactComponent,
-    ForStudentsComponent,
-    MainComponent,
+  imports: [
+    CommonModule,
+    SharedModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
+    MatExpansionModule,
+    FormsModule,
+    MatCheckboxModule,
+    MatRadioModule,
   ],
+  declarations: [],
+  exports: [],
 })
 export class PagesModule {}

@@ -3,12 +3,44 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.17);
-  color: #333;
-  position: relative; /* A footer fix pozícióban lesz */
+  background-color: #095256;
+  position: relative;
   left: 0;
   bottom: 0;
-  width: 100%; /* Teljes szélességű lesz */
+  width: 100%;
+}
+
+.szte {
+  padding-left: 15%;
+}
+
+.subtitle {
+  color: #095256;
+  text-align: left;
+  display: inline-block;
+  font-size: 25px;
+  padding-bottom: 3%;
+}
+.text {
+  color: #095256;
+  padding-bottom: 5%;
+  padding-top: 2%;
+}
+
+.contact-info div {
+  display: flex;
+  padding: 2.5%;
+  color: #474849;
+}
+
+h4 {
+  border-bottom: 1px solid white;
+  padding: 5%;
+}
+
+.icon {
+  margin-right: 2.5%;
+  color: #095256;
 }
 
 .social-links {
@@ -27,7 +59,7 @@
   width: 30px;
   height: 30px;
   margin: 0 5px;
-  color: #fff;
+  color: white;
   border-radius: 50%;
   text-decoration: none;
 }
@@ -36,34 +68,26 @@
   font-size: 18px;
 }
 
-.footer-text {
+.footer-text p {
   color: white;
   text-align: center;
   font-size: 10px;
 }
 
-/* footer.component.css */
-/* ... */
-
-/* Új CSS szabályok a mobil nézethez */
 @media (max-width: 768px) {
   .footer-container {
-    padding: 20px 0; /* Növeljük a padding-ot a mobil nézetben */
+    padding-top: 3px;
   }
-
-  .contact-position {
-    flex-direction: column; /* A contact sávok oszlopokba rendeződnek mobil nézetben */
-  }
-
-  .contact-column {
-    margin: 10px 0; /* Csökkentsük a sávok közötti térközt mobil nézetben */
+  .grey {
+    display: none;
   }
 
   .social-links {
-    font-size: 24px; /* Csökkentsük az ikonok méretét mobil nézetben */
+    font-size: 30px;
+    gap: 16px;
   }
 
   .footer-text {
-    font-size: 12px; /* Csökkentsük a szöveg méretét mobil nézetben */
+    font-size: 12px;
   }
 }

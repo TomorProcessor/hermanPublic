@@ -32,7 +32,11 @@
                 "output": "/assets/webfonts/"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              {
+                "input": "src/styles.scss"
+              }
+            ],
             "scripts": [
               {
                 "input": "node_modules/@popperjs/core/dist/esm/index.js",
@@ -46,13 +50,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "6kb"
                 }
               ],
               "outputHashing": "all"
@@ -95,6 +99,13 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "kollegium-projekt:build:production"
           }
         }
       }

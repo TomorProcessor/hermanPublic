@@ -1,0 +1,45 @@
+<mat-toolbar id="navigation">
+  <div id="menuToggle">
+    <input class="mobile-item" type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/news">Hirdetmények</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/infos">Információk</a>
+      </li>
+      <li class="menu-items-mobile">
+        <a class="mobile-item" routerLink="/gallery">Galéria</a>
+      </li>
+      <li class="menu-items-mobile">
+        <ng-container *ngIf="currentUser?.isAdmin">
+          <a class="mobile-item" routerLink="/users"> Felhasználók</a>
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+
+  <img class="icon" src="assets/icon.png" height="70px" />
+  <img class="kollegium" src="assets/hermanottokollegium.png" height="60px" />
+  <div class="menu-items">
+    <a style="color: white" href="/news">Hirdetmények </a>
+    <a style="color: white" href="/infos">Információk</a>
+    <a style="color: white" href="/gallery">Galéria</a>
+    <ng-container *ngIf="currentUser?.isAdmin">
+      <a style="color: white" href="/users">Felhasználók</a>
+    </ng-container>
+  </div>
+
+  <button
+    (click)="logout()"
+    style="color: white"
+    mat-raised-button
+    color="primary"
+    class="button-container"
+  >
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
