@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="subtitle">LAKÁS</h1>
+      <p>
+        Az „A” épület első emeletén három lakás helyezkedik el, amelyek bárki
+        számára bérelhetők. A lakások magukba foglalnak egy nappalit, konyhát,
+        fürdőszobát, hálószobát és egy erkélyt. Nappaliban található 2 kanapé,
+        egy dohányzó asztal, íróasztal, székek, és egy kétszemélyes ágy. A
+        nappaliból elérhető az erkély, és a hálószoba. A hálószobában egy db
+        egyszemélyes ágy található. A fürdőszobában zuhanyzó, wc, és egy
+        mosógép, a konyhában elektromos tűzhely és hűtőszekrény található.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <app-slideshow [images]="firstSlideshowImages"></app-slideshow>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-slideshow [images]="secondSlideshowImages"></app-slideshow>
+    </div>
+    <div class="col-md-6">
+      <h1 class="subtitle title">LAKÁSFOGLALÁS</h1>
+      <p>
+        A szállás az érkezés napján 13 órától foglalható el. A szállást a
+        távozás napján 10 óráig kell elhagyni.
+      </p>
+      <p>
+        Foglalás menete: Az <a class="email">iroda@ohsh.u-szeged.hu</a> címre
+        kell levelet írni ezzel kapcsolatban. Fizetni csak az elektronikusan
+        kiállított Díjbekérőben leírtak szerint, utalással lehet.
+      </p>
+      <p>
+        Szállásdíj: 5000 -Ft + 250 -Ft (ÁFA) + 500 -Ft (IFA)/fő/éj (4 éves
+        kortól)
+      </p>
+      <p>IFA: Idegenforgalmi adó. Ez alól mentességet élvez:</p>
+      <ul>
+        <li>
+          Szegedi közép- és felsőfokú oktatási intézménynél fennálló tanulói,
+          hallgatói jogviszonyban álló vendég
+        </li>
+        <li>Szolgálati kötelezettséget teljesítő vendég</li>
+        <li>
+          Szegedi lakóhellyel, tartózkodási hellyel, székhellyel, telephellyel
+          rendelkező vendég
+        </li>
+        <li>70 év feletti, 18 év alatti életkorú vendég</li>
+        <li>
+          Szegeden, ideiglenes jellegű iparűzési tevékenységet végző vendég
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

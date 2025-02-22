@@ -1,0 +1,25 @@
+ul {
+  list-style-type: none;
+}
+
+.card-title {
+  font-size: 18px;
+  padding-bottom: 2%;
+  color: #474849;
+}
+
+li {
+  color: #474849;
+  padding: 2%;
+}
+
+a {
+  color: #095256;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 16px;
+  }
+}

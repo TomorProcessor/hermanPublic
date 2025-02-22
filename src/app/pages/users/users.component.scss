@@ -1,0 +1,24 @@
+.tablesize {
+  padding: 2%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.icon {
+  color: #2c676b;
+  padding-right: 2%;
+}
+
+li {
+  padding-bottom: 3%;
+  color: rgb(90, 91, 91);
+}
+
+@media (max-width: 768px) {
+  .tablesize {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

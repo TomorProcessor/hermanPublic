@@ -1,0 +1,50 @@
+<app-headerForStudents></app-headerForStudents>
+<div class="tablesize" *ngIf="users.length > 0">
+  <h2 class="subtitle">FELHASZNÁLÓK</h2>
+  <table mat-table [dataSource]="users">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Név</th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.lastName }} {{ user.firstName }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="neptun">
+      <th mat-header-cell *matHeaderCellDef>Neptun kód</th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.neptun }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+    </ng-container>
+    <ng-container matColumnDef="isAdmin">
+      <th mat-header-cell *matHeaderCellDef>Admin</th>
+      <td mat-cell *matCellDef="let user">{{ user.isAdmin }}</td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let user">
+        <button
+          mat-icon-button
+          type="button"
+          color="primary"
+          (click)="setUserAdmin(user.id)"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr
+      mat-header-row
+      *matHeaderRowDef="['name', 'neptun', 'email', 'isAdmin', 'actions']"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="
+        let row;
+        columns: ['name', 'neptun', 'email', 'isAdmin', 'actions']
+      "
+    ></tr>
+  </table>
+</div>

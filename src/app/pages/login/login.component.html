@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="container">
+  <mat-card class="card">
+    <h1 class="subtitle">BEJELENTKEZÉS</h1>
+    <mat-form-field style="padding-top: 2%" class="form" appearance="outline">
+      <input [formControl]="email" matInput placeholder="Email" />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="form" appearance="outline">
+      <input
+        [formControl]="password"
+        matInput
+        placeholder="Jelszó"
+        [type]="hide ? 'password' : 'text'"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <br />
+    <button
+      class="form"
+      (click)="login()"
+      mat-raised-button
+      style="color: white"
+      color="primary"
+    >
+      Bejelentkezés
+    </button>
+    <br />
+    <p>Nincs még fiókod, de kollégista vagy? Akkor regisztrálj!</p>
+    <button
+      routerLink="/regist"
+      class="form"
+      mat-raised-button
+      style="color: white"
+      color="accent"
+    >
+      Regisztráció
+    </button>
+  </mat-card>
+</div>

@@ -1,0 +1,67 @@
+.contact-info div {
+  display: flex;
+  padding: 2.5%;
+  margin-left: 5%;
+  color: #474849;
+}
+
+.my-google-map {
+  .map-container {
+    width: 1300px;
+    height: 600px;
+    border-radius: 20px;
+  }
+}
+
+.icon {
+  margin-right: 2.5%;
+  color: #095256;
+}
+
+.container {
+  margin-top: 5%;
+}
+
+.subtitle {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #095256;
+}
+
+li {
+  padding: 1%;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: normal;
+  color: #474849;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media (max-width: 768px) {
+  .my-google-map {
+    .map-container {
+      width: 440px;
+      height: 300px;
+      border-radius: 20px;
+    }
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .icon {
+    transform: scale(0.8);
+  }
+}

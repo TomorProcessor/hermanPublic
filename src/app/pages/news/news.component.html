@@ -1,0 +1,83 @@
+<app-headerForStudents></app-headerForStudents>
+
+<div class="helpForAdmins" *ngIf="isAdmin">
+  <h1 class="title">TUDNIVALÓK</h1>
+  <ul>
+    <li>
+      <p>
+        <mat-icon color="primary" class="icon"> settings </mat-icon>Ezzel a
+        gombbal tudod módosítani a hirdetményt
+      </p>
+    </li>
+    <li>
+      <p>
+        <mat-icon color="primary" class="icon"> save </mat-icon>Ezzel a gombbal
+        tudod menteni a módosítást
+      </p>
+    </li>
+    <li>
+      <p>
+        <mat-icon color="primary" class="icon"> delete</mat-icon> Ezzel a
+        gombbal törölheted a hirdetményt
+      </p>
+    </li>
+  </ul>
+</div>
+
+<h1 class="subtitle">HIRDETMÉNYEK</h1>
+
+<div class="news-container" *ngFor="let message of dataSource | async">
+  <div class="date">{{ message.date | dateFormat }}</div>
+  <div>
+    <p class="borderbottom">
+      {{ message.message }}
+    </p>
+    <p>
+      <button
+        *ngIf="isAdmin"
+        mat-icon-button
+        color="primary"
+        type="button"
+        (click)="saveChanges()"
+      >
+        <mat-icon class="icon"> save </mat-icon>
+      </button>
+      <button
+        *ngIf="isAdmin"
+        mat-icon-button
+        color="primary"
+        (click)="editMessage(message)"
+      >
+        <mat-icon class="icon"> settings </mat-icon>
+      </button>
+      <button
+        *ngIf="isAdmin"
+        mat-icon-button
+        color="primary"
+        (click)="deleteMessage(message)"
+      >
+        <mat-icon class="icon"> delete</mat-icon>
+      </button>
+    </p>
+  </div>
+</div>
+
+<div class="card-container" *ngIf="isAdmin">
+  <mat-card class="card"
+    ><mat-form-field appearance="outline" class="inputs">
+      <form [formGroup]="messageForm" (ngSubmit)="addMessage()">
+        <textarea matInput formControlName="message" rows="5"></textarea>
+      </form>
+    </mat-form-field>
+    <button
+      class="comment_button"
+      mat-raised-button
+      color="primary"
+      style="color: white"
+      type="button"
+      (click)="addMessage()"
+    >
+      Komment hozzáadása
+    </button></mat-card
+  >
+</div>

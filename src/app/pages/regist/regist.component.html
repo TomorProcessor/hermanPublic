@@ -1,0 +1,80 @@
+<app-header></app-header>
+<div class="container">
+  <mat-card class="card">
+    <h1 class="subtitle">REGISZTRÁCIÓ</h1>
+    <form [formGroup]="registForm" (ngSubmit)="onSubmit()" class="form-grid">
+      <mat-form-field appearance="outline" class="form-item">
+        <input formControlName="email" matInput placeholder="Email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-item">
+        <input formControlName="neptun" matInput placeholder="Neptun kód" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-item">
+        <input formControlName="lastName" matInput placeholder="Vezetéknév" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-item">
+        <input formControlName="firstName" matInput placeholder="Keresztnév" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-item">
+        <input
+          formControlName="password"
+          matInput
+          placeholder="Jelszó"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-item">
+        <input
+          formControlName="rePassword"
+          matInput
+          placeholder="Jelszó megerősítése"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button
+        class="form-item buttons"
+        mat-raised-button
+        style="color: white"
+        color="primary"
+        type="submit"
+      >
+        Regisztráció
+      </button>
+
+      <button
+        class="form-item"
+        routerLink="/login"
+        mat-raised-button
+        style="color: white"
+        color="accent"
+      >
+        Mégse
+      </button>
+    </form>
+    <br />
+  </mat-card>
+</div>
