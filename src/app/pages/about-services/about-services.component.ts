@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutServicesComponent {
   firstSlideshowImages = [
-    'assets/haloszobalakas1.png',
+    'assets/haloszobalakas1.jpg',
     'assets/haloszobalakas2.jpg',
     'assets/haloszobalakas3.jpg',
     'assets/haloszobalakas4.jpg',
   ];
   secondSlideshowImages = [
     'assets/lakas1.jpg',
-    'assets/lakas2.png',
+    'assets/lakas2.jpg',
     'assets/lakas3.jpg',
-    'assets/lakas4.png',
+    'assets/lakas4.jpg',
     'assets/lakas5.jpg',
   ];
 }

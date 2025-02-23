@@ -13,7 +13,7 @@ export class AboutBComponent {
     'assets/bszoba4.jpg',
     'assets/bfolyoso1.jpg',
     'assets/bfolyoso2.jpg',
-    'assets/bkonyha1.png',
+    'assets/bkonyha1.jpg',
     'assets/bkonyha2.jpg',
   ];
   secondSlideshowImages = [
