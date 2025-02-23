@@ -18,6 +18,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from './environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,6 +39,15 @@ import { AngularFireModule } from '@angular/fire/compat';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
+    {
+      ngModule: GoogleMapsModule,
+      providers: [
+        {
+          provide: 'googleMapsApiKey',
+          useValue: environment.googleMapsApiKey
+        }
+      ]
+    },
   ],
   providers: [],
   bootstrap: [AppComponent],
