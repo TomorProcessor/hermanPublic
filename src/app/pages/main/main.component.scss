@@ -63,12 +63,15 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
   text-align: center;
   font-size: large;
   z-index: 2;
+  width: 100%;
+}
+
+#mainLogo {
+  max-width: 100%;
+  max-height: 500px;
 }
 
 .bottom-bar {
@@ -184,11 +187,11 @@ h4 {
   .welc {
     font-size: 17px;
   }
-
+/*
   .card {
     width: 400px;
     margin-left: 5%;
-  }
+  }*/
 
   .container.textbox {
     width: 90%;
