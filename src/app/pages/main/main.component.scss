@@ -54,7 +54,13 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -10%;
+  margin-top: calc(-1 * var(--mat-toolbar-standard-height));
+}
+
+@media (max-width: 599px) {
+  .main-container .mainpic {
+    margin-top: calc(-1 * var(--mat-toolbar-mobile-height));
+  }
 }
 
 .overlay-text {
