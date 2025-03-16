@@ -9,6 +9,10 @@
   background-position: center;
 }
 
+.megyeri {
+  max-width: 100%;
+}
+
 .imagemegyeri {
   padding: 2%;
   float: left;
@@ -60,6 +64,7 @@ h4 {
     padding: 2%;
     float: none;
     width: 400px;
+    max-width: 100%;
   }
 
   .row.row-cols-1.row-cols-md-6.g-4 > .col {
@@ -70,11 +75,13 @@ h4 {
   .card-img-top {
     height: 150px;
     width: 200px;
+    max-width: 100%;
   }
 
   .card {
     width: 200px;
     margin-bottom: 7%;
+    max-width: 100%;
   }
 
   .container.textbox {
